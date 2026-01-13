@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
       "src": "server.js",
@@ -8,9 +8,25 @@
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "OPTIONS"
+      ],
+      "dest": "/server.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With, Accept, Origin",
+        "Access-Control-Max-Age": "86400"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "/server.js"
     }
   ]
 }
-
