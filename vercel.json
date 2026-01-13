@@ -1,19 +1,38 @@
 {
-  "version": 2,
+  "version": 3,
   "builds": [
     {
       "src": "server.js",
       "use": "@vercel/node"
     }
   ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization, X-Requested-With, Accept, Origin"
+        },
+        {
+          "key": "Access-Control-Max-Age",
+          "value": "86400"
+        }
+      ]
+    }
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
       "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "DELETE",
         "OPTIONS"
       ],
       "dest": "/server.js",
@@ -22,6 +41,21 @@
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With, Accept, Origin",
         "Access-Control-Max-Age": "86400"
+      }
+    },
+    {
+      "src": "/api/(.*)",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "dest": "/server.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With, Accept, Origin"
       }
     },
     {
