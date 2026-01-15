@@ -1,23 +1,9 @@
-// Helper function to get Thai timezone timestamp
-const getThaiTimestamp = () => {
-  return new Date().toLocaleString('th-TH', {
-    timeZone: 'Asia/Bangkok',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false,
-  });
-};
-
 export const apiResponse = {
   success: (data, meta = {}) => ({
     success: true,
     data,
     meta: {
-      timestamp: getThaiTimestamp(),
+      timestamp: new Date().toISOString(),
       ...meta,
     },
   }),
@@ -29,14 +15,14 @@ export const apiResponse = {
       ...(details && { details }),
     },
     meta: {
-      timestamp: getThaiTimestamp(),
+      timestamp: new Date().toISOString(),
     },
   }),
   paginated: (data, page, size, hasMore) => ({
     success: true,
     data,
     meta: {
-      timestamp: getThaiTimestamp(),
+      timestamp: new Date().toISOString(),
       pagination: {
         page: parseInt(page),
         size: parseInt(size),

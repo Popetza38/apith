@@ -512,127 +512,80 @@ export default class Dramabox {
 
     let result = [];
     let totalChapters = 0;
-    let savedPayChapterNum = 0;
+    let currentIdx = 1;
 
-    console.log(`[Chapters] Fetching all chapters for Book ID: ${bookId}...`);
+    console.log(`[Chapters] ดึงตอนทั้งหมดสำหรับ Book ID: ${bookId}`);
 
-    const fetchBatch = async (index, isRetry = false) => {
+    // ดึง batch แรก
+    const firstData = await this.request("/drama-box/chapterv2/batch/load", {
+      boundaryIndex: 0,
+      comingPlaySectionId: -1,
+      index: 1,
+      currencyPlaySource: "discover_new_rec_new",
+      needEndRecommend: 0,
+      currencyPlaySourceName: "",
+      preLoad: false,
+      rid: "",
+      pullCid: "",
+      loadDirection: 0,
+      bookId,
+    });
+
+    if (firstData?.data) {
+      totalChapters = firstData.data.chapterCount || 0;
+      const firstChapters = firstData.data.chapterList || [];
+      result.push(...firstChapters);
+      console.log(`[Chapters] รวมทั้งหมด: ${totalChapters} ตอน | ดึงได้: ${firstChapters.length} ตอน`);
+    }
+
+    // ดึง batch ถัดไปจนครบ
+    currentIdx = 6; // เริ่มจากตอนที่ 6
+    while (currentIdx <= totalChapters) {
       try {
         const batchData = await this.request("/drama-box/chapterv2/batch/load", {
           boundaryIndex: 0,
           comingPlaySectionId: -1,
-          index: index,
+          index: currentIdx,
           currencyPlaySource: "discover_new_rec_new",
           needEndRecommend: 0,
           currencyPlaySourceName: "",
           preLoad: false,
           rid: "",
           pullCid: "",
-          loadDirection: index === 1 ? 0 : 1,
+          loadDirection: 1,
           bookId,
         });
 
         const chapters = batchData?.data?.chapterList || [];
-        const isEndOfBook = index + 5 >= totalChapters && totalChapters !== 0;
-
-        // Check if data is limited (need token refresh)
-        if (
-          chapters.length <= 2 &&
-          index !== savedPayChapterNum &&
-          !isRetry &&
-          !isEndOfBook &&
-          index > 1
-        ) {
-          console.log(`[Chapters] ⚠️ Limited data (${chapters.length}). Refreshing token...`);
-          throw new Error("TriggerRetry: Data suspected limited");
+        if (chapters.length > 0) {
+          result.push(...chapters);
+          console.log(`[Chapters] ดึง index ${currentIdx}: ${chapters.length} ตอน (รวม: ${result.length})`);
         }
-
-        return batchData;
-      } catch (error) {
-        if (!isRetry && error.message.includes("TriggerRetry")) {
-          // Refresh token
-          this.tokenCache = null;
-          cache.del(`token_${this.lang}`);
-          await this.generateNewToken(Date.now());
-
-          // Re-fetch pay chapter if needed
-          if (savedPayChapterNum > 0 && index !== savedPayChapterNum) {
-            await fetchBatch(savedPayChapterNum, true).catch(() => { });
-            await delay(1500);
-          }
-          await delay(2000);
-          return fetchBatch(index, true);
-        }
-        throw error;
-      }
-    };
-
-    // Fetch first batch to get total count
-    const firstData = await fetchBatch(1);
-
-    if (firstData?.data) {
-      totalChapters = firstData.data.chapterCount || 0;
-      savedPayChapterNum = firstData.data.payChapterNum || 0;
-      if (firstData.data.chapterList) {
-        result.push(...firstData.data.chapterList);
-      }
-      console.log(`[Chapters] Total: ${totalChapters} episodes, PayChapter: ${savedPayChapterNum}`);
-    }
-
-    // Fetch remaining batches (5 episodes per batch)
-    let currentIdx = 6;
-    let retryLoopCount = 0;
-
-    while (currentIdx <= totalChapters) {
-      try {
-        const batchData = await fetchBatch(currentIdx);
-        const items = batchData?.data?.chapterList || [];
-
-        if (items.length > 0) {
-          result.push(...items);
-          currentIdx += 5;
-          retryLoopCount = 0;
-        } else {
-          retryLoopCount++;
-          if (retryLoopCount >= 3) {
-            currentIdx += 5;
-            retryLoopCount = 0;
-          } else {
-            await delay(2000);
-          }
-        }
-        await delay(400);
+        currentIdx += 5;
+        await delay(300); // หน่วงเวลาเล็กน้อยเพื่อไม่ให้โดน rate limit
       } catch (error) {
         console.error(`[Chapters] Error at index ${currentIdx}:`, error.message);
-        currentIdx += 5;
+        currentIdx += 5; // ข้ามไปต่อ
       }
     }
 
-    // Remove duplicates and sort
+    // ลบ duplicate และจัดเรียง
     const uniqueMap = new Map();
     result.forEach((ch) => uniqueMap.set(ch.chapterId, ch));
-
-    const chapters = Array.from(uniqueMap.values())
+    const uniqueChapters = Array.from(uniqueMap.values())
       .sort((a, b) => (a.chapterIndex || 0) - (b.chapterIndex || 0));
 
-    // Add video path for each chapter
-    chapters.forEach((ch) => {
-      const cdn = ch.cdnList?.find((c) => c.isDefault === 1) || ch.cdnList?.[0];
-      if (cdn?.videoPathList) {
-        const preferred =
-          cdn.videoPathList.find((v) => v.isDefault === 1) ||
-          cdn.videoPathList.find((v) => v.quality === 1080) ||
-          cdn.videoPathList.find((v) => v.quality === 720) ||
-          cdn.videoPathList[0];
-        ch.videoPath = preferred?.videoPath || "N/A";
-      } else {
-        ch.videoPath = "N/A";
-      }
+    // เพิ่ม videoPath
+    uniqueChapters.forEach((ch) => {
+      const cdn = ch.cdnList?.find((c) => c.isDefault === 1);
+      ch.videoPath =
+        cdn?.videoPathList?.find((v) => v.isDefault === 1)?.videoPath || "N/A";
     });
 
-    console.log(`[Chapters] ✅ Done. Fetched ${chapters.length} episodes`);
-    cache.set(cacheKey, chapters, CONFIG.CACHE_TTL.CHAPTERS);
-    return chapters;
+    console.log(`[Chapters] ✅ สำเร็จ: ${uniqueChapters.length} ตอน (ไม่ซ้ำ)`);
+
+    cache.set(cacheKey, uniqueChapters, CONFIG.CACHE_TTL.CHAPTERS);
+    return uniqueChapters;
   }
 
   async batchDownload(bookId) {
