@@ -5,20 +5,26 @@ export const configureSecurity = (app) => {
   // Trust proxy
   app.set("trust proxy", 1);
 
-  // Security headers
+  // Security headers - disable policies that block cross-origin requests
   app.use(
     helmet({
       contentSecurityPolicy: false, // Disable for EJS templates
       crossOriginEmbedderPolicy: false,
+      crossOriginResourcePolicy: { policy: "cross-origin" },
+      crossOriginOpenerPolicy: false,
     })
   );
 
-  // CORS
+  // CORS - allow all origins
   app.use(
     cors({
-      origin: "*",
-      methods: ["GET", "POST", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
+      origin: true, // Allow all origins
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+      credentials: true,
     })
   );
+
+  // Handle preflight requests
+  app.options("*", cors());
 };
