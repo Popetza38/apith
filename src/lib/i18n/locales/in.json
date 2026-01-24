@@ -1,0 +1,160 @@
+{
+  "code": "in",
+  "name": "Indonesian",
+  "nativeName": "Bahasa Indonesia",
+  "flag": "🇮🇩",
+  "region": "Indonesia",
+  "direction": "ltr",
+  "seo": {
+    "siteTitle": "DramaBox - Streaming Drama Pendek",
+    "siteDescription": "Nonton drama pendek gratis dan tanpa iklan. Temukan ribuan drama menarik dari berbagai genre.",
+    "siteKeywords": "drama pendek, streaming drama, nonton drama gratis, DramaBox, drama indonesia",
+    "ogTitle": "DramaBox - Streaming Drama Pendek Gratis",
+    "ogDescription": "Temukan dan tonton drama pendek favoritmu secara gratis!",
+    "twitterTitle": "DramaBox - Streaming Drama Pendek",
+    "twitterDescription": "Nonton drama pendek gratis dan tanpa iklan."
+  },
+  "nav": {
+    "home": "Beranda",
+    "latest": "Terbaru",
+    "popular": "Terpopuler",
+    "dubbed": "Sulih Suara",
+    "search": "Cari drama...",
+    "language": "Bahasa"
+  },
+  "home": {
+    "forYou": "Untuk Kamu",
+    "forYouDescription": "Drama pilihan yang dipersonalisasi khusus untukmu. Temukan cerita seru yang sesuai selera!",
+    "trending": "Sedang Tren",
+    "continueWatching": "Lanjutkan Menonton",
+    "recommended": "Direkomendasikan",
+    "latestDescription": "Drama-drama terbaru yang baru saja rilis. Jangan sampai ketinggalan!",
+    "trendingDescription": "Drama-drama paling populer yang sedang ditonton banyak orang!",
+    "dubbedDescription": "Drama dengan dubbing bahasa Indonesia"
+  },
+  "page": {
+    "latest": {
+      "title": "Drama Terbaru",
+      "description": "Drama-drama terbaru yang baru saja rilis. Jangan sampai ketinggalan!"
+    },
+    "popular": {
+      "title": "Trending Sekarang",
+      "description": "Drama-drama paling populer yang sedang ditonton banyak orang!"
+    },
+    "dubbed": {
+      "title": "Sulih Suara Indonesia",
+      "description": "Drama dengan dubbing bahasa Indonesia"
+    }
+  },
+  "buttons": {
+    "watchNow": "Tonton Sekarang",
+    "readMore": "Baca Selengkapnya",
+    "loadMore": "Muat Lebih Banyak",
+    "share": "Bagikan",
+    "bookmark": "Simpan",
+    "bookmarked": "Disimpan",
+    "like": "Suka",
+    "liked": "Disukai"
+  },
+  "filters": {
+    "all": "Semua",
+    "latest": "Terbaru",
+    "popular": "Terpopuler",
+    "completed": "Selesai",
+    "ongoing": "Berlangsung"
+  },
+  "genres": {
+    "romance": "Romantis",
+    "action": "Aksi",
+    "comedy": "Komedi",
+    "drama": "Drama",
+    "fantasy": "Fantasi",
+    "horror": "Horor",
+    "thriller": "Thriller",
+    "mystery": "Misteri",
+    "sci_fi": "Sci-Fi",
+    "slice_of_life": "Slice of Life"
+  },
+  "detail": {
+    "episodes": "Episode",
+    "episode": "Episode",
+    "synopsis": "Sinopsis",
+    "status": "Status",
+    "author": "Penulis",
+    "views": "Dilihat",
+    "likes": "Suka",
+    "chapters": "Bab",
+    "related": "Drama Terkait",
+    "comments": "Komentar"
+  },
+  "status": {
+    "ongoing": "Berlangsung",
+    "completed": "Selesai",
+    "hiatus": "Jeda"
+  },
+  "errors": {
+    "notFound": "Tidak Ditemukan",
+    "somethingWentWrong": "Terjadi Kesalahan",
+    "tryAgain": "Coba Lagi",
+    "goBack": "Kembali",
+    "goHome": "Ke Beranda",
+    "failedToLoad": "Gagal memuat drama. Silakan coba lagi.",
+    "noDramasFound": "Tidak ada drama ditemukan",
+    "noSearchResults": "Tidak ada hasil untuk \"{query}\"",
+    "searchPlaceholder": "Ketik untuk mencari drama"
+  },
+  "footer": {
+    "description": "Platform streaming drama pendek terbaik dengan koleksi ribuan judul dari berbagai genre.",
+    "navigation": "Navigasi",
+    "quickLinks": "Tautan Cepat",
+    "support": "Dukungan",
+    "legal": "Legal",
+    "more": "Lainnya",
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfService": "Syarat & Ketentuan",
+    "contact": "Kontak",
+    "about": "Tentang",
+    "faq": "FAQ",
+    "buyApi": "Beli Source Code API",
+    "allRightsReserved": "Hak Cipta Dilindungi"
+  },
+  "pagination": {
+    "previous": "Sebelumnya",
+    "next": "Selanjutnya",
+    "page": "Halaman",
+    "of": "dari"
+  },
+  "watch": {
+    "episodeList": "Daftar Episode"
+  },
+  "loading": {
+    "loadingDrama": "Sedang Memuat Drama",
+    "preparingEpisodes": "Mohon tunggu sebentar, kami sedang menyiapkan episode untukmu..."
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "content": "DramaBox adalah platform streaming drama pendek terbaik yang menawarkan pengalaman menonton yang luar biasa. Dengan koleksi ribuan judul dari berbagai genre seperti romantis, aksi, komedi, fantasi, dan banyak lagi, kami memastikan ada sesuatu untuk semua orang.\n\nMisi kami adalah menyediakan konten berkualitas tinggi yang dapat diakses dengan mudah oleh siapa saja, di mana saja, kapan saja. Kami bekerja sama dengan kreator berbakat dari seluruh dunia untuk menghadirkan cerita-cerita yang menarik dan menghibur.\n\nDramaBox berkomitmen untuk:\n• Kualitas: Konten dengan produksi tinggi dan cerita yang menarik\n• Aksesibilitas: Platform yang mudah digunakan di semua perangkat\n• Keragaman: Koleksi dari berbagai genre dan budaya\n• Komunitas: Membangun komunitas pecinta drama yang suportif\n\nTerima kasih telah memilih DramaBox sebagai platform hiburan Anda."
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "Terakhir Diperbarui: Januari 2026",
+    "content": "Kami menghargai privasi Anda. Kebijakan privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.\n\nInformasi yang Kami Kumpulkan:\n• Informasi akun yang Anda berikan saat mendaftar\n• Data penggunaan seperti riwayat tontonan\n• Informasi perangkat dan teknis\n• Data lokasi untuk pemahaman konten regional\n\nPenggunaan Informasi:\n• Menyediakan dan meningkatkan layanan kami\n• Mempersonalisasi konten sesuai preferensi Anda\n• Menganalisis tren penggunaan\n• Mengkomunikasikan pembaruan dan promosi\n\nKeamanan Data:\n• Kami menggunakan enkripsi untuk melindungi data Anda\n• Akses terbatas untuk informasi pribadi\n• Pembaruan rutin keamanan sistem\n\nHak Anda:\n• Akses ke informasi pribadi Anda\n• Meminta penghapusan data\n• Menolak certain penggunaan data\n• Menarik persetujuan kapan saja\n\nUntuk pertanyaan lebih lanjut, hubungi kami melalui halaman Kontak."
+  },
+  "terms": {
+    "title": "Syarat & Ketentuan",
+    "lastUpdated": "Terakhir Diperbarui: Januari 2026",
+    "content": "Dengan menggunakan DramaBox, Anda menyetujui syarat dan ketentuan berikut:\n\n1. Penggunaan Layanan\n• Anda harus berusia minimal 13 tahun untuk menggunakan layanan ini\n• Anda bertanggung jawab atas keamanan akun Anda\n• Layanan ini hanya untuk penggunaan pribadi, non-komersial\n\n2. Konten dan Hak Cipta\n• Semua konten dilindungi oleh hak cipta\n• Anda tidak boleh menyalin, mendistribusikan, atau mengeksploitasi konten\n• Penggunaan yang adil diperbolehkan untuk tujuan pribadi\n\n3. Perilaku Pengguna\n• Dilarang menggunakan layanan untuk aktivitas ilegal\n• Dilarang mengganggu pengalaman pengguna lain\n• Dilarang mencoba membobol atau merusak sistem\n\n4. Pembatalan dan Penghentian\n• Kami dapat menghentikan akun yang melanggar ketentuan\n• Anda dapat menghapus akun kapan saja\n\n5. Perubahan Ketentuan\n• Kami dapat memperbarui ketentuan ini sewaktu-waktu\n• Pengguna akan diberitahu tentang perubahan material\n\n6. Batasan Tanggung Jawab\n• Layanan disediakan \"sebagaimana adanya\"\n• Kami tidak bertanggung jawab atas kerusakan dari penggunaan\n\nDengan melanjutkan penggunaan, Anda menyetujui ketentuan ini."
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "content": "Kami senang mendengar dari Anda! Ada pertanyaan, saran, atau masalah?\n\nCara Menghubungi:\n• Email: support@dramabox.net\n• Media Sosial: Ikuti kami untuk update terbaru\n• Formulir Feedback: Bagikan pengalaman Anda\n\nJam Operasional:\n• Senin - Jumat: 09:00 - 18:00 WIB\n• Sabtu - Minggu: 10:00 - 16:00 WIB\n\nWaktu Respon:\n• Email: Kami akan membalas dalam 24-48 jam\n• Media Sosial: Respon lebih cepat untuk pertanyaan umum\n\nUntuk pertanyaan umum, cek FAQ kami sebelum menghubungi.",
+    "formTitle": "Kirim Pesan",
+    "name": "Nama",
+    "namePlaceholder": "Masukkan nama Anda",
+    "email": "Email",
+    "emailPlaceholder": "nama@email.com",
+    "message": "Pesan",
+    "messagePlaceholder": "Tulis pesan Anda di sini...",
+    "send": "Kirim Pesan"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "code": "de",
+  "name": "German",
+  "nativeName": "Deutsch",
+  "flag": "🇩🇪",
+  "region": "Germany",
+  "direction": "ltr",
+  "seo": {
+    "siteTitle": "DramaBox - Kurzserien Streaming",
+    "siteDescription": "Schauen Sie Kurzserien kostenlos ohne Werbung an. Entdecken Sie tausende interessante Dramen aus verschiedenen Genres.",
+    "siteKeywords": "Kurzserie, Serie streamen, Serie kostenlos ansehen, DramaBox, Dramen",
+    "ogTitle": "DramaBox - Kostenloser Kurzserien Streaming",
+    "ogDescription": "Entdecken und schauen Sie Ihre Lieblingskurzserien kostenlos!",
+    "twitterTitle": "DramaBox - Kurzserien Streaming",
+    "twitterDescription": "Kostenlos Kurzserien ohne Werbung ansehen."
+  },
+  "nav": {
+    "home": "Startseite",
+    "latest": "Neueste",
+    "popular": "Beliebt",
+    "dubbed": "Synchronisiert",
+    "search": "Serien durchsuchen...",
+    "language": "Sprache"
+  },
+  "home": {
+    "forYou": "Für Dich",
+    "forYouDescription": "Personalisierte Serienauswahl nur für Sie. Entdecken Sie aufregende Geschichten, die Ihrem Geschmack entsprechen!",
+    "trending": "Im Trend",
+    "continueWatching": "Weiter Ansehen",
+    "recommended": "Empfohlen",
+    "latestDescription": "Die neuesten Dramen, die gerade veröffentlicht wurden. Verpassen Sie es nicht!",
+    "trendingDescription": "Die beliebtesten Dramen, die alle jetzt ansehen!",
+    "dubbedDescription": "Dramen mit deutscher Synchronisation"
+  },
+  "page": {
+    "latest": {
+      "title": "Neueste Dramen",
+      "description": "Die neuesten Dramen, die gerade veröffentlicht wurden. Verpassen Sie es nicht!"
+    },
+    "popular": {
+      "title": "Im Trend",
+      "description": "Die beliebtesten Dramen, die jetzt alle schauen!"
+    },
+    "dubbed": {
+      "title": "Auf Deutsch Synchronisiert",
+      "description": "Dramen mit deutscher Synchronisation"
+    }
+  },
+  "buttons": {
+    "watchNow": "Jetzt Ansehen",
+    "readMore": "Mehr Lesen",
+    "loadMore": "Mehr Laden",
+    "share": "Teilen",
+    "bookmark": "Lesezeichen",
+    "bookmarked": "Gespeichert",
+    "like": "Gefällt Mir",
+    "liked": "Gemocht"
+  },
+  "filters": {
+    "all": "Alle",
+    "latest": "Neueste",
+    "popular": "Beliebt",
+    "completed": "Abgeschlossen",
+    "ongoing": "Laufend"
+  },
+  "genres": {
+    "romance": "Romanze",
+    "action": "Action",
+    "comedy": "Komödie",
+    "drama": "Drama",
+    "fantasy": "Fantasy",
+    "horror": "Horror",
+    "thriller": "Thriller",
+    "mystery": "Mystery",
+    "sci_fi": "Sci-Fi",
+    "slice_of_life": "Lebensschnitte"
+  },
+  "detail": {
+    "episodes": "Episoden",
+    "episode": "Episode",
+    "synopsis": "Zusammenfassung",
+    "status": "Status",
+    "author": "Autor",
+    "views": "Aufrufe",
+    "likes": "Gefällt Mir",
+    "chapters": "Kapitel",
+    "related": "Verwandte Dramen",
+    "comments": "Kommentare"
+  },
+  "status": {
+    "ongoing": "Laufend",
+    "completed": "Abgeschlossen",
+    "hiatus": "Pause"
+  },
+  "errors": {
+    "notFound": "Nicht Gefunden",
+    "somethingWentWrong": "Etwas Ist Schiefgelaufen",
+    "tryAgain": "Nochmal Versuchen",
+    "goBack": "Zurück",
+    "goHome": "Zur Startseite",
+    "failedToLoad": "Dramen konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+    "noDramasFound": "Keine Dramas gefunden",
+    "noSearchResults": "Keine Ergebnisse für \"{query}\"",
+    "searchPlaceholder": "Tippen Sie, um Dramas zu suchen"
+  },
+  "footer": {
+    "description": "Die beste Streaming-Plattform für Kurzserien mit einer Sammlung von tausenden Titeln aus verschiedenen Genres.",
+    "navigation": "Navigation",
+    "quickLinks": "Schnelllinks",
+    "support": "Support",
+    "legal": "Rechtliches",
+    "more": "Mehr",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "contact": "Kontakt",
+    "about": "Über Uns",
+    "faq": "FAQ",
+    "buyApi": "API-Quellcode Kaufen",
+    "allRightsReserved": "Alle Rechte Vorbehalten"
+  },
+  "pagination": {
+    "previous": "Zurück",
+    "next": "Weiter",
+    "page": "Seite",
+    "of": "von"
+  },
+  "watch": {
+    "episodeList": "Episodenliste"
+  },
+  "loading": {
+    "loadingDrama": "Drama Wird Geladen",
+    "preparingEpisodes": "Bitte warten, wir bereiten Episoden für Sie vor..."
+  },
+  "about": {
+    "title": "Über Uns",
+    "content": "DramaBox ist die beste Streaming-Plattform für Kurzserien und bietet ein außergewöhnliches Seherlebnis. Mit einer Sammlung von tausenden Titeln aus verschiedenen Genres wie Romantik, Action, Komödie, Fantasy und mehr, stellen wir sicher, dass es für alle etwas gibt.\n\nUnsere Mission ist es, hochwertige Inhalte bereitzustellen, die überall und jederzeit für jeden einfach zugänglich sind. Wir arbeiten mit talentierten Schöpfern aus der ganzen Welt zusammen, um Ihnen fesselnde und unterhaltsame Geschichten zu bringen.\n\nDramaBox ist engagiert für:\n• Qualität: High-Production-Inhalte mit fesselnden Geschichten\n• Zugänglichkeit: Easy-to-use-Plattform auf allen Geräten\n• Vielfalt: Sammlung aus verschiedenen Genres und Kulturen\n• Gemeinschaft: Aufbau einer unterstützenden Gemeinschaft von Drama-Liebhabern\n\nDanke, dass Sie DramaBox als Ihre Unterhaltungsplattform gewählt haben."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt Aktualisiert: Januar 2026",
+    "content": "Wir schätzen Ihre Privatsphäre. Diese Datenschutzrichtlinie erklärt, wie wir Ihre persönlichen Informationen sammeln, nutzen und schützen.\n\nInformationen, die Wir Sammeln:\n• Kontoinformationen, die Sie bei der Registrierung angeben\n• Nutzungsdaten wie Verlauf der Ansichten\n• Geräte- und technische Informationen\n• Standortdaten für regionales Inhaltsverständnis\n\nNutzung der Informationen:\n• Bereitstellung und Verbesserung unserer Services\n• Personalisierung von Inhalten nach Ihren Vorlieben\n• Analyse von Nutzungstrends\n• Kommunikation von Updates und Werbeaktionen\n\nDatensicherheit:\n• Wir nutzen Verschlüsselung zum Schutz Ihrer Daten\n• Eingeschränkter Zugang zu persönlichen Informationen\n• Regelmäßige Sicherheits-System-Updates\n\nIhre Rechte:\n• Zugang zu Ihren persönlichen Informationen\n• Anfrage zur Datenlöschung\n• Opt-out von bestimmten Datennutzungen\n• Widerruf der Einwilligung jederzeit\n\nFür weitere Fragen kontaktieren Sie uns über unsere Kontaktseite."
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt Aktualisiert: Januar 2026",
+    "content": "Durch die Nutzung von DramaBox stimmen Sie den folgenden Geschäftsbedingungen zu:\n\n1. Service-Nutzung\n• Sie müssen mindestens 13 Jahre alt sein, um diesen Service zu nutzen\n• Sie sind verantwortlich für die Sicherheit Ihres Kontos\n• Der Service ist nur für persönliche, nicht-kommerzielle Nutzung\n\n2. Inhalte und Urheberrecht\n• Alle Inhalte sind urheberrechtlich geschützt\n• Sie dürfen Inhalte nicht kopieren, verbreiten oder ausnutzen\n• Fair Use ist für persönliche Zwecke gestattet\n\n3. Benutzerverhalten\n• Nutzen Sie den Service nicht für illegale Aktivitäten\n• Stören Sie nicht die Erfahrung anderer\n• Versuchen Sie nicht, das System zu hacken oder zu beschädigen\n\n4. Kündigung und Sperrung\n• Wir können Konten kündigen, die gegen die Bedingungen verstoßen\n• Sie können Ihr Konto jederzeit löschen\n\n5. Änderungen an Bedingungen\n• Wir können diese Bedingungen periodically aktualisieren\n• Benutzer werden über wesentliche Änderungen benachrichtigt\n\n6. Haftungsbeschränkung\n• Der Service wird \"wie besehen\" bereitgestellt\n• Wir sind nicht haftbar für Schäden aus der Nutzung\n\nDurch die fortgesetzte Nutzung stimmen Sie diesen Bedingungen zu."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie Uns",
+    "content": "Wir würden gerne von Ihnen hören! Haben Sie Fragen, Vorschläge oder Probleme?\n\nKontaktmöglichkeiten:\n• E-Mail: support@dramabox.net\n• Soziale Medien: Folgen Sie uns für die neuesten Updates\n• Feedback-Formular: Teilen Sie Ihre Erfahrung\n\nÖffnungszeiten:\n• Montag - Freitag: 09:00 - 18:00 UTC\n• Samstag - Sonntag: 10:00 - 16:00 UTC\n\nAntwortzeit:\n• E-Mail: Wir antworten innerhalb von 24-48 Stunden\n• Soziale Medien: Schnellere Antwort für allgemeine Fragen\n\nFür allgemeine Fragen überprüfen Sie bitte zuerst unsere FAQ.",
+    "formTitle": "Nachricht Senden",
+    "name": "Name",
+    "namePlaceholder": "Geben Sie Ihren Namen ein",
+    "email": "E-Mail",
+    "emailPlaceholder": "name@beispiel.de",
+    "message": "Nachricht",
+    "messagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
+    "send": "Nachricht Senden"
+  }
+}

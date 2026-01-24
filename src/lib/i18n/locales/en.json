@@ -1,0 +1,160 @@
+{
+  "code": "en",
+  "name": "English",
+  "nativeName": "English",
+  "flag": "🇺🇸",
+  "region": "United States",
+  "direction": "ltr",
+  "seo": {
+    "siteTitle": "DramaBox - Short Drama Streaming",
+    "siteDescription": "Watch short dramas for free without ads. Discover thousands of interesting dramas from various genres.",
+    "siteKeywords": "short drama, drama streaming, watch drama free, DramaBox, drama",
+    "ogTitle": "DramaBox - Free Short Drama Streaming",
+    "ogDescription": "Discover and watch your favorite short dramas for free!",
+    "twitterTitle": "DramaBox - Short Drama Streaming",
+    "twitterDescription": "Watch short dramas for free without ads."
+  },
+  "nav": {
+    "home": "Home",
+    "latest": "Latest",
+    "popular": "Popular",
+    "dubbed": "Dubbed",
+    "search": "Search dramas...",
+    "language": "Language"
+  },
+  "home": {
+    "forYou": "For You",
+    "forYouDescription": "Personalized drama picks just for you. Discover exciting stories that match your taste!",
+    "trending": "Trending",
+    "continueWatching": "Continue Watching",
+    "recommended": "Recommended",
+    "latestDescription": "The newest dramas just released. Don't miss out!",
+    "trendingDescription": "The most popular dramas everyone is watching right now!",
+    "dubbedDescription": "Dramas with Indonesian voice-over"
+  },
+  "page": {
+    "latest": {
+      "title": "Latest Dramas",
+      "description": "The newest dramas just released. Don't miss out!"
+    },
+    "popular": {
+      "title": "Trending Now",
+      "description": "The most popular dramas everyone is watching right now!"
+    },
+    "dubbed": {
+      "title": "Indonesian Dubbed",
+      "description": "Dramas with Indonesian voice-over"
+    }
+  },
+  "buttons": {
+    "watchNow": "Watch Now",
+    "readMore": "Read More",
+    "loadMore": "Load More",
+    "share": "Share",
+    "bookmark": "Bookmark",
+    "bookmarked": "Bookmarked",
+    "like": "Like",
+    "liked": "Liked"
+  },
+  "filters": {
+    "all": "All",
+    "latest": "Latest",
+    "popular": "Popular",
+    "completed": "Completed",
+    "ongoing": "Ongoing"
+  },
+  "genres": {
+    "romance": "Romance",
+    "action": "Action",
+    "comedy": "Comedy",
+    "drama": "Drama",
+    "fantasy": "Fantasy",
+    "horror": "Horror",
+    "thriller": "Thriller",
+    "mystery": "Mystery",
+    "sci_fi": "Sci-Fi",
+    "slice_of_life": "Slice of Life"
+  },
+  "detail": {
+    "episodes": "Episodes",
+    "episode": "Episode",
+    "synopsis": "Synopsis",
+    "status": "Status",
+    "author": "Author",
+    "views": "Views",
+    "likes": "Likes",
+    "chapters": "Chapters",
+    "related": "Related Dramas",
+    "comments": "Comments"
+  },
+  "status": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "hiatus": "Hiatus"
+  },
+  "errors": {
+    "notFound": "Not Found",
+    "somethingWentWrong": "Something Went Wrong",
+    "tryAgain": "Try Again",
+    "goBack": "Go Back",
+    "goHome": "Go Home",
+    "failedToLoad": "Failed to load dramas. Please try again.",
+    "noDramasFound": "No dramas found",
+    "noSearchResults": "No results for \"{query}\"",
+    "searchPlaceholder": "Type to search dramas"
+  },
+  "footer": {
+    "description": "The best short drama streaming platform with a collection of thousands of titles from various genres.",
+    "navigation": "Navigation",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "legal": "Legal",
+    "more": "More",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact",
+    "about": "About",
+    "faq": "FAQ",
+    "buyApi": "Buy Source Code API",
+    "allRightsReserved": "All Rights Reserved"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "watch": {
+    "episodeList": "Episode List"
+  },
+  "loading": {
+    "loadingDrama": "Loading Drama",
+    "preparingEpisodes": "Please wait, we're preparing episodes for you..."
+  },
+  "about": {
+    "title": "About Us",
+    "content": "DramaBox is the best short drama streaming platform offering an extraordinary viewing experience. With a collection of thousands of titles from various genres like romance, action, comedy, fantasy, and more, we ensure there's something for everyone.\n\nOur mission is to provide high-quality content that is easily accessible to anyone, anywhere, anytime. We work with talented creators from around the world to bring you engaging and entertaining stories.\n\nDramaBox is committed to:\n• Quality: High-production content with compelling stories\n• Accessibility: Easy-to-use platform across all devices\n• Diversity: Collection from various genres and cultures\n• Community: Building a supportive community of drama lovers\n\nThank you for choosing DramaBox as your entertainment platform."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: January 2026",
+    "content": "We value your privacy. This privacy policy explains how we collect, use, and protect your personal information.\n\nInformation We Collect:\n• Account information you provide when registering\n• Usage data such as viewing history\n• Device and technical information\n• Location data for regional content understanding\n\nUse of Information:\n• Provide and improve our services\n• Personalize content according to your preferences\n• Analyze usage trends\n• Communicate updates and promotions\n\nData Security:\n• We use encryption to protect your data\n• Limited access to personal information\n• Regular security system updates\n\nYour Rights:\n• Access to your personal information\n• Request data deletion\n• Opt-out of certain data uses\n• Withdraw consent at any time\n\nFor more questions, contact us through our Contact page."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: January 2026",
+    "content": "By using DramaBox, you agree to the following terms and conditions:\n\n1. Service Usage\n• You must be at least 13 years old to use this service\n• You are responsible for your account security\n• Service is for personal, non-commercial use only\n\n2. Content and Copyright\n• All content is protected by copyright\n• You may not copy, distribute, or exploit content\n• Fair use is permitted for personal purposes\n\n3. User Conduct\n• Do not use service for illegal activities\n• Do not disrupt others' experience\n• Do not attempt to hack or damage the system\n\n4. Termination and Suspension\n• We may terminate accounts violating terms\n• You may delete your account at any time\n\n5. Changes to Terms\n• We may update these terms periodically\n• Users will be notified of material changes\n\n6. Limitation of Liability\n• Service is provided \"as is\"\n• We are not liable for damages from use\n\nBy continuing to use, you agree to these terms."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "content": "We'd love to hear from you! Have questions, suggestions, or issues?\n\nWays to Contact:\n• Email: support@dramabox.net\n• Social Media: Follow us for latest updates\n• Feedback Form: Share your experience\n\nOperating Hours:\n• Monday - Friday: 09:00 - 18:00 UTC\n• Saturday - Sunday: 10:00 - 16:00 UTC\n\nResponse Time:\n• Email: We respond within 24-48 hours\n• Social Media: Faster response for general inquiries\n\nFor general questions, please check our FAQ first.",
+    "formTitle": "Send Message",
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send Message"
+  }
+}

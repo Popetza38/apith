@@ -1,0 +1,1449 @@
+{
+  "metadata": {
+    "siteName": "DramaBox",
+    "defaultLanguage": "in"
+  },
+  "locales": {
+    "in": {
+      "code": "in",
+      "name": "Indonesian",
+      "nativeName": "Bahasa Indonesia",
+      "flag": "🇮🇩",
+      "region": "Indonesia",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - Streaming Drama Pendek",
+        "siteDescription": "Nonton drama pendek gratis dan tanpa iklan. Temukan ribuan drama menarik dari berbagai genre.",
+        "siteKeywords": "drama pendek, streaming drama, nonton drama gratis, DramaBox, drama indonesia",
+        "ogTitle": "DramaBox - Streaming Drama Pendek Gratis",
+        "ogDescription": "Temukan dan tonton drama pendek favoritmu secara gratis!",
+        "twitterTitle": "DramaBox - Streaming Drama Pendek",
+        "twitterDescription": "Nonton drama pendek gratis dan tanpa iklan."
+      },
+      "nav": {
+        "home": "Beranda",
+        "latest": "Terbaru",
+        "popular": "Terpopuler",
+        "dubbed": "Sulih Suara",
+        "search": "Cari drama...",
+        "language": "Bahasa"
+      },
+      "home": {
+        "forYou": "Untuk Kamu",
+        "forYouDescription": "Drama pilihan yang dipersonalisasi khusus untukmu. Temukan cerita seru yang sesuai selera!",
+        "trending": "Sedang Tren",
+        "continueWatching": "Lanjutkan Menonton",
+        "recommended": "Direkomendasikan"
+      },
+      "page": {
+        "latest": {
+          "title": "Drama Terbaru",
+          "description": "Drama-drama terbaru yang baru saja rilis. Jangan sampai ketinggalan!"
+        },
+        "popular": {
+          "title": "Trending Sekarang",
+          "description": "Drama-drama paling populer yang sedang ditonton banyak orang!"
+        },
+        "dubbed": {
+          "title": "Sulih Suara Indonesia",
+          "description": "Drama dengan dubbing bahasa Indonesia"
+        }
+      },
+      "buttons": {
+        "watchNow": "Tonton Sekarang",
+        "readMore": "Baca Selengkapnya",
+        "loadMore": "Muat Lebih Banyak",
+        "share": "Bagikan",
+        "bookmark": "Simpan",
+        "bookmarked": "Disimpan",
+        "like": "Suka",
+        "liked": "Disukai"
+      },
+      "filters": {
+        "all": "Semua",
+        "latest": "Terbaru",
+        "popular": "Terpopuler",
+        "completed": "Selesai",
+        "ongoing": "Berlangsung"
+      },
+      "genres": {
+        "romance": "Romantis",
+        "action": "Aksi",
+        "comedy": "Komedi",
+        "drama": "Drama",
+        "fantasy": "Fantasi",
+        "horror": "Horor",
+        "thriller": "Thriller",
+        "mystery": "Misteri",
+        "sci_fi": "Sci-Fi",
+        "slice_of_life": "Slice of Life"
+      },
+      "detail": {
+        "episodes": "Episode",
+        "episode": "Episode",
+        "synopsis": "Sinopsis",
+        "status": "Status",
+        "author": "Penulis",
+        "views": "Dilihat",
+        "likes": "Suka",
+        "chapters": "Bab",
+        "related": "Drama Terkait",
+        "comments": "Komentar"
+      },
+      "status": {
+        "ongoing": "Berlangsung",
+        "completed": "Selesai",
+        "hiatus": "Jeda"
+      },
+      "errors": {
+        "notFound": "Tidak Ditemukan",
+        "somethingWentWrong": "Terjadi Kesalahan",
+        "tryAgain": "Coba Lagi",
+        "goBack": "Kembali",
+        "goHome": "Ke Beranda",
+        "failedToLoad": "Gagal memuat drama. Silakan coba lagi.",
+        "noDramasFound": "Tidak ada drama ditemukan",
+        "noSearchResults": "Tidak ada hasil untuk \"{query}\"",
+        "searchPlaceholder": "Ketik untuk mencari drama"
+      },
+      "footer": {
+        "description": "Platform streaming drama pendek terbaik dengan koleksi ribuan judul dari berbagai genre.",
+        "navigation": "Navigasi",
+        "quickLinks": "Tautan Cepat",
+        "support": "Dukungan",
+        "legal": "Legal",
+        "more": "Lainnya",
+        "privacyPolicy": "Kebijakan Privasi",
+        "termsOfService": "Syarat & Ketentuan",
+        "contact": "Kontak",
+        "about": "Tentang",
+        "faq": "FAQ",
+        "buyApi": "Beli Source Code API",
+        "allRightsReserved": "Hak Cipta Dilindungi"
+      },
+      "pagination": {
+        "previous": "Sebelumnya",
+        "next": "Selanjutnya",
+        "page": "Halaman",
+        "of": "dari"
+      },
+      "watch": {
+        "episodeList": "Daftar Episode"
+      },
+      "loading": {
+        "loadingDrama": "Sedang Memuat Drama",
+        "preparingEpisodes": "Mohon tunggu sebentar, kami sedang menyiapkan episode untukmu..."
+      }
+    },
+    "en": {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "flag": "🇺🇸",
+      "region": "United States",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - Short Drama Streaming",
+        "siteDescription": "Watch short dramas for free without ads. Discover thousands of interesting dramas from various genres.",
+        "siteKeywords": "short drama, drama streaming, watch drama free, DramaBox, drama",
+        "ogTitle": "DramaBox - Free Short Drama Streaming",
+        "ogDescription": "Discover and watch your favorite short dramas for free!",
+        "twitterTitle": "DramaBox - Short Drama Streaming",
+        "twitterDescription": "Watch short dramas for free without ads."
+      },
+      "nav": {
+        "home": "Home",
+        "latest": "Latest",
+        "popular": "Popular",
+        "dubbed": "Dubbed",
+        "search": "Search dramas...",
+        "language": "Language"
+      },
+      "home": {
+        "forYou": "For You",
+        "forYouDescription": "Personalized drama picks selected just for you. Find exciting stories that match your taste!",
+        "trending": "Trending",
+        "continueWatching": "Continue Watching",
+        "recommended": "Recommended"
+      },
+      "page": {
+        "latest": {
+          "title": "Latest Dramas",
+          "description": "Newly released dramas. Don't miss out!"
+        },
+        "popular": {
+          "title": "Trending Now",
+          "description": "Most popular dramas being watched by everyone right now!"
+        },
+        "dubbed": {
+          "title": "English Dubbed",
+          "description": "Dramas with English dubbing"
+        }
+      },
+      "buttons": {
+        "watchNow": "Watch Now",
+        "readMore": "Read More",
+        "loadMore": "Load More",
+        "share": "Share",
+        "bookmark": "Bookmark",
+        "bookmarked": "Bookmarked",
+        "like": "Like",
+        "liked": "Liked"
+      },
+      "filters": {
+        "all": "All",
+        "latest": "Latest",
+        "popular": "Popular",
+        "completed": "Completed",
+        "ongoing": "Ongoing"
+      },
+      "genres": {
+        "romance": "Romance",
+        "action": "Action",
+        "comedy": "Comedy",
+        "drama": "Drama",
+        "fantasy": "Fantasy",
+        "horror": "Horror",
+        "thriller": "Thriller",
+        "mystery": "Mystery",
+        "sci_fi": "Sci-Fi",
+        "slice_of_life": "Slice of Life"
+      },
+      "detail": {
+        "episodes": "Episodes",
+        "episode": "Episode",
+        "synopsis": "Synopsis",
+        "status": "Status",
+        "author": "Author",
+        "views": "Views",
+        "likes": "Likes",
+        "chapters": "Chapters",
+        "related": "Related Dramas",
+        "comments": "Comments"
+      },
+      "status": {
+        "ongoing": "Ongoing",
+        "completed": "Completed",
+        "hiatus": "Hiatus"
+      },
+      "errors": {
+        "notFound": "Not Found",
+        "somethingWentWrong": "Something Went Wrong",
+        "tryAgain": "Try Again",
+        "goBack": "Go Back",
+        "goHome": "Go Home",
+        "failedToLoad": "Failed to load dramas. Please try again.",
+        "noDramasFound": "No dramas found",
+        "noSearchResults": "No results for \"{query}\"",
+        "searchPlaceholder": "Type to search dramas"
+      },
+      "footer": {
+        "description": "The best short drama streaming platform with a collection of thousands of titles from various genres.",
+        "navigation": "Navigation",
+        "quickLinks": "Quick Links",
+        "support": "Support",
+        "legal": "Legal",
+        "more": "More",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "contact": "Contact",
+        "about": "About",
+        "faq": "FAQ",
+        "buyApi": "Buy Source Code API",
+        "allRightsReserved": "All Rights Reserved"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page",
+        "of": "of"
+      },
+      "watch": {
+        "episodeList": "Episode List"
+      },
+      "loading": {
+        "loadingDrama": "Loading Drama",
+        "preparingEpisodes": "Please wait, we're preparing episodes for you..."
+      }
+    },
+    "th": {
+      "code": "th",
+      "name": "Thai",
+      "nativeName": "ภาษาไทย",
+      "flag": "🇹🇭",
+      "region": "Thailand",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - สตรีมมิง ซีรีส์สั้น",
+        "siteDescription": "รับชมซีรีส์สั้นฟรีโดยไม่มีโฆษณา ค้นพบเรื่องสั้นน่าสนใจจากหลากหลายประเภท",
+        "siteKeywords": "ซีรีส์สั้น, สตรีมมิงซีรีส์, รับชมซีรีส์ฟรี, DramaBox, ซีรีส์ไทย",
+        "ogTitle": "DramaBox - สตรีมมิง ซีรีส์สั้นฟรี",
+        "ogDescription": "ค้นพบและรับชมซีรีส์สั้นโปรดของคุณได้ฟรี!",
+        "twitterTitle": "DramaBox - สตรีมมิง ซีรีส์สั้น",
+        "twitterDescription": "รับชมซีรีส์สั้นฟรีโดยไม่มีโฆษณา"
+      },
+      "nav": {
+        "home": "หน้าแรก",
+        "latest": "ล่าสุด",
+        "popular": "ยอดนิยม",
+        "dubbed": "พากย์ไทย",
+        "search": "ค้นหาซีรีส์...",
+        "language": "ภาษา"
+      },
+      "home": {
+        "forYou": "สำหรับคุณ",
+        "forYouDescription": "ซีรีส์ที่เลือกเฉพาะสำหรับคุณ ค้นหาเรื่องราวที่น่าสนใจที่ตรงกับรสนิยมของคุณ!",
+        "trending": "กำลังนิยม",
+        "continueWatching": "ดูต่อ",
+        "recommended": "แนะนำ"
+      },
+      "page": {
+        "latest": {
+          "title": "ซีรีส์ล่าสุด",
+          "description": "ซีรีส์เรื่องใหม่ล่าสุด อย่าพลาด!"
+        },
+        "popular": {
+          "title": "กำลังนิยมตอนนี้",
+          "description": "ซีรี่ย์ยอดนิยมที่คนกำลังดูมากที่สุดตอนนี้!"
+        },
+        "dubbed": {
+          "title": "พากย์ไทย",
+          "description": "ซีรีส์ที่พากย์เป็นภาษาไทย"
+        }
+      },
+      "buttons": {
+        "watchNow": "รับชมเลย",
+        "readMore": "อ่านเพิ่มเติม",
+        "loadMore": "โหลดเพิ่มเติม",
+        "share": "แชร์",
+        "bookmark": "บุ๊คมาร์ก",
+        "bookmarked": "บุ๊คมาร์กแล้ว",
+        "like": "ชอบ",
+        "liked": "ถูกใจแล้ว"
+      },
+      "filters": {
+        "all": "ทั้งหมด",
+        "latest": "ล่าสุด",
+        "popular": "ยอดนิยม",
+        "completed": "จบแล้ว",
+        "ongoing": "กำลังฉาย"
+      },
+      "genres": {
+        "romance": "โรแมนติก",
+        "action": "แอคชั่น",
+        "comedy": "ตลก",
+        "drama": "ดราม่า",
+        "fantasy": "แฟนตาซี",
+        "horror": "สยองขวัญ",
+        "thriller": "ระทึกขวัญ",
+        "mystery": "ลึกลับ",
+        "sci_fi": "ไซไฟ",
+        "slice_of_life": "ชีวิตประจำวัน"
+      },
+      "detail": {
+        "episodes": "ตอน",
+        "episode": "ตอน",
+        "synopsis": "เรื่องย่อ",
+        "status": "สถานะ",
+        "author": "ผู้แต่ง",
+        "views": "วิว",
+        "likes": "ชอบ",
+        "chapters": "บท",
+        "related": "ซีรีส์ที่เกี่ยวข้อง",
+        "comments": "ความคิดเห็น"
+      },
+      "status": {
+        "ongoing": "กำลังฉาย",
+        "completed": "จบแล้ว",
+        "hiatus": "พักชั่วคราว"
+      },
+      "errors": {
+        "notFound": "ไม่พบ",
+        "somethingWentWrong": "เกิดข้อผิดพลาด",
+        "tryAgain": "ลองใหม่",
+        "goBack": "ย้อนกลับ",
+        "goHome": "ไปหน้าแรก",
+        "failedToLoad": "ไม่สามารถโหลดซีรีส์ได้ กรุณาลองอีกครั้ง",
+        "noDramasFound": "ไม่พบซีรีส์",
+        "noSearchResults": "ไม่พบผลลัพธ์สำหรับ \"{query}\"",
+        "searchPlaceholder": "พิมพ์เพื่อค้นหาซีรีส์"
+      },
+      "footer": {
+        "description": "แพลตฟอร์มสตรีมมิงซีรีส์สั้นที่ดีที่สุดพร้อมคอลเลกชันหลายพันเรื่องจากหลากหลายประเภท",
+        "navigation": "การนำทาง",
+        "quickLinks": "ลิงก์ด่วน",
+        "support": "การสนับสนุน",
+        "legal": "กฎหมาย",
+        "more": "เพิ่มเติม",
+        "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+        "termsOfService": "เงื่อนไขการให้บริการ",
+        "contact": "ติดต่อ",
+        "about": "เกี่ยวกับ",
+        "faq": "คำถามที่พบบ่อย",
+        "buyApi": "ซื้อซอร์สโค้ด API",
+        "allRightsReserved": "สงวนลิขสิทธิ์"
+      },
+      "pagination": {
+        "previous": "ก่อนหน้า",
+        "next": "ถัดไป",
+        "page": "หน้า",
+        "of": "จาก"
+      },
+      "watch": {
+        "episodeList": "รายการตอน"
+      },
+      "loading": {
+        "loadingDrama": "กำลังโหลดซีรีส์",
+        "preparingEpisodes": "กรุณารอสักครู่ เรากำลังเตรียมตอนสำหรับคุณ..."
+      }
+    },
+    "ar": {
+      "code": "ar",
+      "name": "Arabic",
+      "nativeName": "العربية",
+      "flag": "🇸🇦",
+      "region": "Saudi Arabia",
+      "direction": "rtl",
+      "seo": {
+        "siteTitle": "DramaBox - بث المسرحيات القصيرة",
+        "siteDescription": "شاهد المسرحيات القصيرة مجاناً بدون إعلانات. اكتشف آلاف المسرحيات المثيرة من مختلف الأنواع.",
+        "siteKeywords": "مسرحيات قصيرة، بث المسرحيات، مشاهدة المسرحيات مجاناً، DramaBox، دراما عربية",
+        "ogTitle": "DramaBox - بث مجاني للمسرحيات القصيرة",
+        "ogDescription": "اكتشف وشاهد مسرحياتك القصيرة المفضلة مجاناً!",
+        "twitterTitle": "DramaBox - بث المسرحيات القصيرة",
+        "twitterDescription": "شاهد المسرحيات القصيرة مجاناً بدون إعلانات."
+      },
+      "nav": {
+        "home": "الرئيسية",
+        "latest": "الأحدث",
+        "popular": "الأكثر شعبية",
+        "dubbed": "مدبلج",
+        "search": "البحث عن مسرحيات...",
+        "language": "اللغة"
+      },
+      "home": {
+        "forYou": "لك",
+        "forYouDescription": "اختيارات مسرحيات مخصصة تم اختيارها لك فقط. اكتشف قصصًا مثيرة تناسب ذوقك!",
+        "trending": "الرائج",
+        "continueWatching": "متابعة المشاهدة",
+        "recommended": "موصى به"
+      },
+      "page": {
+        "latest": {
+          "title": "أحدث المسرحيات",
+          "description": "مسرحيات تم إصدارها حديثاً. لا تفوت!"
+        },
+        "popular": {
+          "title": "الرائج الآن",
+          "description": "المسرحيات الأكثر شعبية التي يشاهدها الجميع الآن!"
+        },
+        "dubbed": {
+          "title": "مدبلج بالعربية",
+          "description": "مسرحيات بالدبلجة العربية"
+        }
+      },
+      "buttons": {
+        "watchNow": "شاهد الآن",
+        "readMore": "اقرأ المزيد",
+        "loadMore": "تحميل المزيد",
+        "share": "مشاركة",
+        "bookmark": "إشارة مرجعية",
+        "bookmarked": "محفوظ",
+        "like": "إعجاب",
+        "liked": "مُعجَب"
+      },
+      "filters": {
+        "all": "الكل",
+        "latest": "الأحدث",
+        "popular": "الأكثر شعبية",
+        "completed": "مكتمل",
+        "ongoing": "قيد التنفيذ"
+      },
+      "genres": {
+        "romance": "رومانسي",
+        "action": "أكشن",
+        "comedy": "كوميديا",
+        "drama": "دراما",
+        "fantasy": "خيال",
+        "horror": "رعب",
+        "thriller": "إثارة",
+        "mystery": "غموض",
+        "sci_fi": "خيال علمي",
+        "slice_of_life": "شريحة من الحياة"
+      },
+      "detail": {
+        "episodes": "الحلقات",
+        "episode": "الحلقة",
+        "synopsis": "ملخص",
+        "status": "الحالة",
+        "author": "المؤلف",
+        "views": "المشاهدات",
+        "likes": "الإعجابات",
+        "chapters": "الفصول",
+        "related": "مسرحيات ذات صلة",
+        "comments": "التعليقات"
+      },
+      "status": {
+        "ongoing": "قيد التنفيذ",
+        "completed": "مكتمل",
+        "hiatus": "إيقاف مؤقت"
+      },
+      "errors": {
+        "notFound": "غير موجود",
+        "somethingWentWrong": "حدث خطأ ما",
+        "tryAgain": "حاول مرة أخرى",
+        "goBack": "العودة",
+        "goHome": "الذهاب للصفحة الرئيسية",
+        "failedToLoad": "فشل تحميل المسرحيات. يرجى المحاولة مرة أخرى.",
+        "noDramasFound": "لم يتم العثور على مسرحيات",
+        "noSearchResults": "لا توجد نتائج لـ \"{query}\"",
+        "searchPlaceholder": "اكتب للبحث عن المسرحيات"
+      },
+      "footer": {
+        "description": "أفضل منصة لبث المسرحيات القصيرة مع مجموعة آلاف العناوين من مختلف الأنواع.",
+        "navigation": "التنقل",
+        "quickLinks": "روابط سريعة",
+        "support": "الدعم",
+        "legal": "قانوني",
+        "more": "المزيد",
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsOfService": "شروط الخدمة",
+        "contact": "اتصال",
+        "about": "حول",
+        "faq": "الأسئلة الشائعة",
+        "buyApi": "شراء شفرة مصدر API",
+        "allRightsReserved": "جميع الحقوق محفوظة"
+      },
+      "pagination": {
+        "previous": "السابق",
+        "next": "التالي",
+        "page": "صفحة",
+        "of": "من"
+      },
+      "watch": {
+        "episodeList": "قائمة الحلقات"
+      },
+      "loading": {
+        "loadingDrama": "جاري تحميل المسرحية",
+        "preparingEpisodes": "يرجى الانتظار، نحن نقوم بإعداد الحلقات لك..."
+      }
+    },
+    "pt": {
+      "code": "pt",
+      "name": "Portuguese",
+      "nativeName": "Português",
+      "flag": "🇧🇷",
+      "region": "Brazil",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - Streaming de Dramas Curtos",
+        "siteDescription": "Assista dramas curtos de graça e sem anúncios. Descubra milhares de dramas interessantes de vários gêneros.",
+        "siteKeywords": "drama curto, streaming de drama, assistir drama grátis, DramaBox, drama brasileiro",
+        "ogTitle": "DramaBox - Streaming Gratuito de Dramas Curtos",
+        "ogDescription": "Descubra e assista seus dramas curtos favoritos de graça!",
+        "twitterTitle": "DramaBox - Streaming de Dramas Curtos",
+        "twitterDescription": "Assista dramas curtos de graça sem anúncios."
+      },
+      "nav": {
+        "home": "Início",
+        "latest": "Mais Recentes",
+        "popular": "Populares",
+        "dubbed": "Dublados",
+        "search": "Pesquisar dramas...",
+        "language": "Idioma"
+      },
+      "home": {
+        "forYou": "Para Você",
+        "forYouDescription": "Escolhas de dramas personalizadas selecionadas especialmente para você. Descubra histórias emocionantes que combinam com seu gosto!",
+        "trending": "Em Alta",
+        "continueWatching": "Continuar Assistindo",
+        "recommended": "Recomendados"
+      },
+      "page": {
+        "latest": {
+          "title": "Dramas Mais Recentes",
+          "description": "Dramas recém-lançados. Não perca!"
+        },
+        "popular": {
+          "title": "Em Alta Agora",
+          "description": "Dramas mais populares que todos estão assistindo agora!"
+        },
+        "dubbed": {
+          "title": "Dublados em Português",
+          "description": "Dramas com dublagem em português"
+        }
+      },
+      "buttons": {
+        "watchNow": "Assistir Agora",
+        "readMore": "Ler Mais",
+        "loadMore": "Carregar Mais",
+        "share": "Compartilhar",
+        "bookmark": "Salvar",
+        "bookmarked": "Salvo",
+        "like": "Curtir",
+        "liked": "Curtido"
+      },
+      "filters": {
+        "all": "Todos",
+        "latest": "Mais Recentes",
+        "popular": "Populares",
+        "completed": "Concluídos",
+        "ongoing": "Em Andamento"
+      },
+      "genres": {
+        "romance": "Romance",
+        "action": "Ação",
+        "comedy": "Comédia",
+        "drama": "Drama",
+        "fantasy": "Fantasia",
+        "horror": "Terror",
+        "thriller": "Thriller",
+        "mystery": "Mistério",
+        "sci_fi": "Ficção Científica",
+        "slice_of_life": "Slice of Life"
+      },
+      "detail": {
+        "episodes": "Episódios",
+        "episode": "Episódio",
+        "synopsis": "Sinopse",
+        "status": "Status",
+        "author": "Autor",
+        "views": "Visualizações",
+        "likes": "Curtidas",
+        "chapters": "Capítulos",
+        "related": "Dramas Relacionados",
+        "comments": "Comentários"
+      },
+      "status": {
+        "ongoing": "Em Andamento",
+        "completed": "Concluído",
+        "hiatus": "Hiato"
+      },
+      "errors": {
+        "notFound": "Não Encontrado",
+        "somethingWentWrong": "Algo Deu Errado",
+        "tryAgain": "Tentar Novamente",
+        "goBack": "Voltar",
+        "goHome": "Ir para o Início",
+        "failedToLoad": "Falha ao carregar dramas. Tente novamente.",
+        "noDramasFound": "Nenhum drama encontrado",
+        "noSearchResults": "Nenhum resultado para \"{query}\"",
+        "searchPlaceholder": "Digite para pesquisar dramas"
+      },
+      "footer": {
+        "description": "A melhor plataforma de streaming de dramas curtos com uma coleção de milhares de títulos de vários gêneros.",
+        "navigation": "Navegação",
+        "quickLinks": "Links Rápidos",
+        "support": "Suporte",
+        "legal": "Legal",
+        "more": "Mais",
+        "privacyPolicy": "Política de Privacidade",
+        "termsOfService": "Termos de Serviço",
+        "contact": "Contato",
+        "about": "Sobre",
+        "faq": "Perguntas Frequentes",
+        "buyApi": "Comprar Código Fonte da API",
+        "allRightsReserved": "Todos os Direitos Reservados"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Próximo",
+        "page": "Página",
+        "of": "de"
+      },
+      "watch": {
+        "episodeList": "Lista de Episódios"
+      },
+      "loading": {
+        "loadingDrama": "Carregando Drama",
+        "preparingEpisodes": "Por favor aguarde, estamos preparando os episódios para você..."
+      }
+    },
+    "fr": {
+      "code": "fr",
+      "name": "French",
+      "nativeName": "Français",
+      "flag": "🇫🇷",
+      "region": "France",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - Streaming de Dramas Courts",
+        "siteDescription": "Regardez des dramas courts gratuitement et sans publicité. Découvrez des milliers de dramas intéressants de divers genres.",
+        "siteKeywords": "drama court, streaming de drama, regarder drama gratuit, DramaBox, drama français",
+        "ogTitle": "DramaBox - Streaming Gratuit de Dramas Courts",
+        "ogDescription": "Découvrez et regardez vos dramas courts préférés gratuitement!",
+        "twitterTitle": "DramaBox - Streaming de Dramas Courts",
+        "twitterDescription": "Regardez des dramas courts gratuitement sans publicité."
+      },
+      "nav": {
+        "home": "Accueil",
+        "latest": "Derniers",
+        "popular": "Populaires",
+        "dubbed": "Doublés",
+        "search": "Rechercher des dramas...",
+        "language": "Langue"
+      },
+      "home": {
+        "forYou": "Pour Vous",
+        "forYouDescription": "Sélections de dramas personnalisées choisies pour vous. Découvrez des histoires passionnantes qui correspondent à vos goûts!",
+        "trending": "Tendances",
+        "continueWatching": "Continuer à Regarder",
+        "recommended": "Recommandés"
+      },
+      "page": {
+        "latest": {
+          "title": "Derniers Dramas",
+          "description": "Dramas nouvellement sortis. Ne manquez pas!"
+        },
+        "popular": {
+          "title": "Tendance Maintenant",
+          "description": "Les dramas les plus populaires que tout le monde regarde maintenant!"
+        },
+        "dubbed": {
+          "title": "Doublés en Français",
+          "description": "Dramas avec doublage français"
+        }
+      },
+      "buttons": {
+        "watchNow": "Regarder Maintenant",
+        "readMore": "Lire Plus",
+        "loadMore": "Charger Plus",
+        "share": "Partager",
+        "bookmark": "Enregistrer",
+        "bookmarked": "Enregistré",
+        "like": "J'aime",
+        "liked": "Aimé"
+      },
+      "filters": {
+        "all": "Tous",
+        "latest": "Derniers",
+        "popular": "Populaires",
+        "completed": "Terminés",
+        "ongoing": "En Cours"
+      },
+      "genres": {
+        "romance": "Romance",
+        "action": "Action",
+        "comedy": "Comédie",
+        "drama": "Drame",
+        "fantasy": "Fantaisie",
+        "horror": "Horreur",
+        "thriller": "Thriller",
+        "mystery": "Mystère",
+        "sci_fi": "Science-Fiction",
+        "slice_of_life": "Slice of Life"
+      },
+      "detail": {
+        "episodes": "Épisodes",
+        "episode": "Épisode",
+        "synopsis": "Synopsis",
+        "status": "Statut",
+        "author": "Auteur",
+        "views": "Vues",
+        "likes": "J'aime",
+        "chapters": "Chapitres",
+        "related": "Dramas Connexes",
+        "comments": "Commentaires"
+      },
+      "status": {
+        "ongoing": "En Cours",
+        "completed": "Terminé",
+        "hiatus": "Pause"
+      },
+      "errors": {
+        "notFound": "Non Trouvé",
+        "somethingWentWrong": "Quelque Chose S'est Mal Passé",
+        "tryAgain": "Réessayer",
+        "goBack": "Retour",
+        "goHome": "Aller à l'Accueil",
+        "failedToLoad": "Échec du chargement des dramas. Veuillez réessayer.",
+        "noDramasFound": "Aucun drama trouvé",
+        "noSearchResults": "Aucun résultat pour \"{query}\"",
+        "searchPlaceholder": "Tapez pour rechercher des dramas"
+      },
+      "footer": {
+        "description": "La meilleure plateforme de streaming de dramas courts avec une collection de milliers de titres de divers genres.",
+        "navigation": "Navigation",
+        "quickLinks": "Liens Rapides",
+        "support": "Support",
+        "legal": "Mentions Légales",
+        "more": "Plus",
+        "privacyPolicy": "Politique de Confidentialité",
+        "termsOfService": "Conditions d'Utilisation",
+        "contact": "Contact",
+        "about": "À Propos",
+        "faq": "FAQ",
+        "buyApi": "Acheter le Code Source API",
+        "allRightsReserved": "Tous Droits Réservés"
+      },
+      "pagination": {
+        "previous": "Précédent",
+        "next": "Suivant",
+        "page": "Page",
+        "of": "sur"
+      },
+      "watch": {
+        "episodeList": "Liste des Épisodes"
+      },
+      "loading": {
+        "loadingDrama": "Chargement du Drama",
+        "preparingEpisodes": "Veuillez patienter, nous préparons les épisodes pour vous..."
+      }
+    },
+    "de": {
+      "code": "de",
+      "name": "German",
+      "nativeName": "Deutsch",
+      "flag": "🇩🇪",
+      "region": "Germany",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - Kurzserien Streaming",
+        "siteDescription": "Schauen Sie sich Kurzserien kostenlos und ohne Werbung an. Entdecken Sie tausende interessante Dramen aus verschiedenen Genres.",
+        "siteKeywords": "Kurzserie, Serien Streaming, Serie kostenlos ansehen, DramaBox, deutsches Drama",
+        "ogTitle": "DramaBox - Kostenloses Kurzserien Streaming",
+        "ogDescription": "Entdecken und schauen Sie Ihre Lieblings-Kurzserien kostenlos!",
+        "twitterTitle": "DramaBox - Kurzserien Streaming",
+        "twitterDescription": "Schauen Sie Kurzserien kostenlos ohne Werbung an."
+      },
+      "nav": {
+        "home": "Startseite",
+        "latest": "Neueste",
+        "popular": "Beliebt",
+        "dubbed": "Synchronisiert",
+        "search": "Serien suchen...",
+        "language": "Sprache"
+      },
+      "home": {
+        "forYou": "Für Dich",
+        "forYouDescription": "Personalisierte Dramenauswahl, die speziell für dich ausgewählt wurde. Entdecke spannende Geschichten, die deinem Geschmack entsprechen!",
+        "trending": "Im Trend",
+        "continueWatching": "Weiterschauen",
+        "recommended": "Empfohlen"
+      },
+      "page": {
+        "latest": {
+          "title": "Neueste Dramen",
+          "description": "Kürzlich veröffentlichte Dramen. Verpass es nicht!"
+        },
+        "popular": {
+          "title": "Im Trend",
+          "description": "Die beliebtesten Dramen, die gerade alle anschauen!"
+        },
+        "dubbed": {
+          "title": "Auf Deutsch Synchronisiert",
+          "description": "Dramen mit deutscher Synchronisation"
+        }
+      },
+      "buttons": {
+        "watchNow": "Jetzt Ansehen",
+        "readMore": "Mehr Lesen",
+        "loadMore": "Mehr Laden",
+        "share": "Teilen",
+        "bookmark": "Speichern",
+        "bookmarked": "Gespeichert",
+        "like": "Gefällt Mir",
+        "liked": "Gemocht"
+      },
+      "filters": {
+        "all": "Alle",
+        "latest": "Neueste",
+        "popular": "Beliebt",
+        "completed": "Abgeschlossen",
+        "ongoing": "Laufend"
+      },
+      "genres": {
+        "romance": "Romantik",
+        "action": "Action",
+        "comedy": "Komödie",
+        "drama": "Drama",
+        "fantasy": "Fantasie",
+        "horror": "Horror",
+        "thriller": "Thriller",
+        "mystery": "Mysterium",
+        "sci_fi": "Sci-Fi",
+        "slice_of_life": "Slice of Life"
+      },
+      "detail": {
+        "episodes": "Episoden",
+        "episode": "Episode",
+        "synopsis": "Zusammenfassung",
+        "status": "Status",
+        "author": "Autor",
+        "views": "Aufrufe",
+        "likes": "Gefällt Mir",
+        "chapters": "Kapitel",
+        "related": "Verwandte Dramen",
+        "comments": "Kommentare"
+      },
+      "status": {
+        "ongoing": "Laufend",
+        "completed": "Abgeschlossen",
+        "hiatus": "Pause"
+      },
+      "errors": {
+        "notFound": "Nicht Gefunden",
+        "somethingWentWrong": "Etwas Ist Schiefgelaufen",
+        "tryAgain": "Nochmal Versuchen",
+        "goBack": "Zurück",
+        "goHome": "Zur Startseite",
+        "failedToLoad": "Dramas konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+        "noDramasFound": "Keine Dramas gefunden",
+        "noSearchResults": "Keine Ergebnisse für \"{query}\"",
+        "searchPlaceholder": "Tippen Sie, um Dramas zu suchen"
+      },
+      "footer": {
+        "description": "Die beste Streaming-Plattform für Kurzserien mit einer Sammlung von tausenden Titeln aus verschiedenen Genres.",
+        "navigation": "Navigation",
+        "quickLinks": "Schnelllinks",
+        "support": "Support",
+        "legal": "Rechtliches",
+        "more": "Mehr",
+        "privacyPolicy": "Datenschutzerklärung",
+        "termsOfService": "Nutzungsbedingungen",
+        "contact": "Kontakt",
+        "about": "Über",
+        "faq": "FAQ",
+        "buyApi": "API-Quellcode Kaufen",
+        "allRightsReserved": "Alle Rechte Vorbehalten"
+      },
+      "pagination": {
+        "previous": "Zurück",
+        "next": "Weiter",
+        "page": "Seite",
+        "of": "von"
+      },
+      "watch": {
+        "episodeList": "Episodenliste"
+      },
+      "loading": {
+        "loadingDrama": "Drama wird geladen",
+        "preparingEpisodes": "Bitte warten, wir bereiten Episoden für Sie vor..."
+      }
+    },
+    "ja": {
+      "code": "ja",
+      "name": "Japanese",
+      "nativeName": "日本語",
+      "flag": "🇯🇵",
+      "region": "Japan",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - 短編ドラマストリーミング",
+        "siteDescription": "広告なしで無料で短編ドラマを見る。様々なジャンルの数千の興味深いドラマを発見してください。",
+        "siteKeywords": "短編ドラマ, ドラマストリーミング, 無料でドラマを見る, DramaBox, 日本のドラマ",
+        "ogTitle": "DramaBox - 無料短編ドラマストリーミング",
+        "ogDescription": "お気に入りの短編ドラマを無料で見つけて視聴しましょう！",
+        "twitterTitle": "DramaBox - 短編ドラマストリーミング",
+        "twitterDescription": "広告なしで無料で短編ドラマを見る。"
+      },
+      "nav": {
+        "home": "ホーム",
+        "latest": "最新",
+        "popular": "人気",
+        "dubbed": "吹き替え",
+        "search": "ドラマを検索...",
+        "language": "言語"
+      },
+      "home": {
+        "forYou": "あなたへ",
+        "forYouDescription": "あなたのために厳選されたパーソナライズされたドラマ。好みに合うエキサイティングなストーリーを見つけましょう！",
+        "trending": "トレンド",
+        "continueWatching": "続きを見る",
+        "recommended": "おすすめ"
+      },
+      "page": {
+        "latest": {
+          "title": "最新のドラマ",
+          "description": "新しくリリースされたドラマ。見逃さないで！"
+        },
+        "popular": {
+          "title": "今トレンド",
+          "description": "今みんなが見ている最も人気のあるドラマ！"
+        },
+        "dubbed": {
+          "title": "日本語吹き替え",
+          "description": "日本語吹き替え付きのドラマ"
+        }
+      },
+      "buttons": {
+        "watchNow": "今すぐ見る",
+        "readMore": "もっと見る",
+        "loadMore": "もっと読み込む",
+        "share": "共有",
+        "bookmark": "ブックマーク",
+        "bookmarked": "ブックマーク済み",
+        "like": "いいね",
+        "liked": "いいね済み"
+      },
+      "filters": {
+        "all": "すべて",
+        "latest": "最新",
+        "popular": "人気",
+        "completed": "完了",
+        "ongoing": "進行中"
+      },
+      "genres": {
+        "romance": "ロマンス",
+        "action": "アクション",
+        "comedy": "コメディ",
+        "drama": "ドラマ",
+        "fantasy": "ファンタジー",
+        "horror": "ホラー",
+        "thriller": "スリラー",
+        "mystery": "ミステリー",
+        "sci_fi": "SF",
+        "slice_of_life": "スライス・オブ・ライフ"
+      },
+      "detail": {
+        "episodes": "エピソード",
+        "episode": "エピソード",
+        "synopsis": "あらすじ",
+        "status": "ステータス",
+        "author": "著者",
+        "views": "視聴数",
+        "likes": "いいね",
+        "chapters": "チャプター",
+        "related": "関連ドラマ",
+        "comments": "コメント"
+      },
+      "status": {
+        "ongoing": "進行中",
+        "completed": "完了",
+        "hiatus": "休止"
+      },
+      "errors": {
+        "notFound": "見つかりません",
+        "somethingWentWrong": "エラーが発生しました",
+        "tryAgain": "再試行",
+        "goBack": "戻る",
+        "goHome": "ホームへ",
+        "failedToLoad": "ドラマの読み込みに失敗しました。もう一度お試しください。",
+        "noDramasFound": "ドラマが見つかりません",
+        "noSearchResults": "\"{query}\"の結果は見つかりませんでした",
+        "searchPlaceholder": "ドラマを検索するには入力してください"
+      },
+      "footer": {
+        "description": "様々なジャンルの数千のタイトルのコレクションを備えた最高の短編ドラマストリーミングプラットフォーム。",
+        "navigation": "ナビゲーション",
+        "quickLinks": "クイックリンク",
+        "support": "サポート",
+        "legal": "法的情報",
+        "more": "その他",
+        "privacyPolicy": "プライバシーポリシー",
+        "termsOfService": "利用規約",
+        "contact": "お問い合わせ",
+        "about": "について",
+        "faq": "FAQ",
+        "buyApi": "API ソースコード購入",
+        "allRightsReserved": "すべての権利予約"
+      },
+      "pagination": {
+        "previous": "前へ",
+        "next": "次へ",
+        "page": "ページ",
+        "of": "/"
+      },
+      "watch": {
+        "episodeList": "エピソードリスト"
+      },
+      "loading": {
+        "loadingDrama": "ドラマを読み込み中",
+        "preparingEpisodes": "お待ちください、エピソードを準備しています..."
+      }
+    },
+    "es": {
+      "code": "es",
+      "name": "Spanish",
+      "nativeName": "Español",
+      "flag": "🇪🇸",
+      "region": "Spain",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - Streaming de Dramas Cortos",
+        "siteDescription": "Mira dramas cortos gratis y sin anuncios. Descubre miles de dramas interesantes de varios géneros.",
+        "siteKeywords": "drama corto, streaming de drama, ver drama gratis, DramaBox, drama español",
+        "ogTitle": "DramaBox - Streaming Gratuito de Dramas Cortos",
+        "ogDescription": "¡Descubre y mira tus dramas cortos favoritos gratis!",
+        "twitterTitle": "DramaBox - Streaming de Dramas Cortos",
+        "twitterDescription": "Mira dramas cortos gratis sin anuncios."
+      },
+      "nav": {
+        "home": "Inicio",
+        "latest": "Lo Más Nuevo",
+        "popular": "Popular",
+        "dubbed": "Doblados",
+        "search": "Buscar dramas...",
+        "language": "Idioma"
+      },
+      "home": {
+        "forYou": "Para Ti",
+        "forYouDescription": "Selecciones de dramas personalizadas elegidas especialmente para ti. Descubre historias emocionantes que se ajustan a tu gusto!",
+        "trending": "Tendencias",
+        "continueWatching": "Continuar Viendo",
+        "recommended": "Recomendados"
+      },
+      "page": {
+        "latest": {
+          "title": "Dramas Más Recientes",
+          "description": "Dramas recién lanzados. ¡No te lo pierdas!"
+        },
+        "popular": {
+          "title": "Tendencia Ahora",
+          "description": "Los dramas más populares que todos están viendo ahora mismo!"
+        },
+        "dubbed": {
+          "title": "Doblados en Español",
+          "description": "Dramas con doblaje en español"
+        }
+      },
+      "buttons": {
+        "watchNow": "Ver Ahora",
+        "readMore": "Leer Más",
+        "loadMore": "Cargar Más",
+        "share": "Compartir",
+        "bookmark": "Guardar",
+        "bookmarked": "Guardado",
+        "like": "Me Gusta",
+        "liked": "Te Gustó"
+      },
+      "filters": {
+        "all": "Todos",
+        "latest": "Lo Más Nuevo",
+        "popular": "Popular",
+        "completed": "Completado",
+        "ongoing": "En Progreso"
+      },
+      "genres": {
+        "romance": "Romance",
+        "action": "Acción",
+        "comedy": "Comedia",
+        "drama": "Drama",
+        "fantasy": "Fantasía",
+        "horror": "Horror",
+        "thriller": "Thriller",
+        "mystery": "Misterio",
+        "sci_fi": "Ciencia Ficción",
+        "slice_of_life": "Slice of Life"
+      },
+      "detail": {
+        "episodes": "Episodios",
+        "episode": "Episodio",
+        "synopsis": "Sinopsis",
+        "status": "Estado",
+        "author": "Autor",
+        "views": "Vistas",
+        "likes": "Me Gusta",
+        "chapters": "Capítulos",
+        "related": "Dramas Relacionados",
+        "comments": "Comentarios"
+      },
+      "status": {
+        "ongoing": "En Progreso",
+        "completed": "Completado",
+        "hiatus": "Pausa"
+      },
+      "errors": {
+        "notFound": "No Encontrado",
+        "somethingWentWrong": "Algo Salrió Mal",
+        "tryAgain": "Intentar De Nuevo",
+        "goBack": "Volver",
+        "goHome": "Ir al Inicio",
+        "failedToLoad": "Error al cargar dramas. Por favor, inténtelo de nuevo.",
+        "noDramasFound": "No se encontraron dramas",
+        "noSearchResults": "Sin resultados para \"{query}\"",
+        "searchPlaceholder": "Escriba para buscar dramas"
+      },
+      "footer": {
+        "description": "La mejor plataforma de streaming de dramas cortos con una colección de miles de títulos de varios géneros.",
+        "navigation": "Navegación",
+        "quickLinks": "Enlaces Rápidos",
+        "support": "Soporte",
+        "legal": "Legal",
+        "more": "Más",
+        "privacyPolicy": "Política de Privacidad",
+        "termsOfService": "Términos de Servicio",
+        "contact": "Contacto",
+        "about": "Acerca De",
+        "faq": "Preguntas Frecuentes",
+        "buyApi": "Comprar Código Fuente de la API",
+        "allRightsReserved": "Todos los Derechos Reservados"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "page": "Página",
+        "of": "de"
+      },
+      "watch": {
+        "episodeList": "Lista de Episodios"
+      },
+      "loading": {
+        "loadingDrama": "Cargando Drama",
+        "preparingEpisodes": "Por favor espera, estamos preparando los episodios para ti..."
+      }
+    },
+    "zh": {
+      "code": "zh",
+      "name": "Chinese Traditional",
+      "nativeName": "繁體中文",
+      "flag": "🇹🇼",
+      "region": "Taiwan",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - 短劇串流",
+        "siteDescription": "免費觀看短劇，無廣告。發現來自各種類型的數千個有趣的短劇。",
+        "siteKeywords": "短劇, 劇集串流, 免費看劇, DramaBox, 華語劇",
+        "ogTitle": "DramaBox - 免費短劇串流",
+        "ogDescription": "免費發現並觀看您最喜歡的短劇！",
+        "twitterTitle": "DramaBox - 短劇串流",
+        "twitterDescription": "免費觀看短劇，無廣告。"
+      },
+      "nav": {
+        "home": "首頁",
+        "latest": "最新",
+        "popular": "熱門",
+        "dubbed": "配音",
+        "search": "搜尋劇集...",
+        "language": "語言"
+      },
+      "home": {
+        "forYou": "為您推薦",
+        "forYouDescription": "專為您精選的個人化劇集。找到符合您口味的精彩故事！",
+        "trending": "趨勢",
+        "continueWatching": "繼續觀看",
+        "recommended": "推薦"
+      },
+      "page": {
+        "latest": {
+          "title": "最新劇集",
+          "description": "最新發布的劇集。千萬別錯過！"
+        },
+        "popular": {
+          "title": "現正熱門",
+          "description": "大家都在看的最受歡迎劇集！"
+        },
+        "dubbed": {
+          "title": "國語配音",
+          "description": "配備國語配音的劇集"
+        }
+      },
+      "buttons": {
+        "watchNow": "立即觀看",
+        "readMore": "閱讀更多",
+        "loadMore": "載入更多",
+        "share": "分享",
+        "bookmark": "書籤",
+        "bookmarked": "已加入書籤",
+        "like": "喜歡",
+        "liked": "已喜歡"
+      },
+      "filters": {
+        "all": "全部",
+        "latest": "最新",
+        "popular": "熱門",
+        "completed": "已完成",
+        "ongoing": "進行中"
+      },
+      "genres": {
+        "romance": "浪漫",
+        "action": "動作",
+        "comedy": "喜劇",
+        "drama": "劇情",
+        "fantasy": "奇幻",
+        "horror": "恐怖",
+        "thriller": "驚悚",
+        "mystery": "懸疑",
+        "sci_fi": "科幻",
+        "slice_of_life": "生活"
+      },
+      "detail": {
+        "episodes": "集數",
+        "episode": "集",
+        "synopsis": "劇情簡介",
+        "status": "狀態",
+        "author": "作者",
+        "views": "觀看次數",
+        "likes": "喜歡",
+        "chapters": "章節",
+        "related": "相關劇集",
+        "comments": "評論"
+      },
+      "status": {
+        "ongoing": "進行中",
+        "completed": "已完成",
+        "hiatus": "暫停"
+      },
+      "errors": {
+        "notFound": "未找到",
+        "somethingWentWrong": "發生錯誤",
+        "tryAgain": "再試一次",
+        "goBack": "返回",
+        "goHome": "回到首頁",
+        "failedToLoad": "加載劇集失敗。請再試一次。",
+        "noDramasFound": "未找到劇集",
+        "noSearchResults": "沒有關於 \"{query}\" 的結果",
+        "searchPlaceholder": "輸入以搜索劇集"
+      },
+      "footer": {
+        "description": "最好的短劇串流平台，擁有來自各種類型的數千個標題。",
+        "navigation": "導航",
+        "quickLinks": "快速連結",
+        "support": "支援",
+        "legal": "法律",
+        "more": "更多",
+        "privacyPolicy": "隱私政策",
+        "termsOfService": "服務條款",
+        "contact": "聯絡",
+        "about": "關於",
+        "faq": "常見問題",
+        "buyApi": "購買 API 源代碼",
+        "allRightsReserved": "版權所有"
+      },
+      "pagination": {
+        "previous": "上一頁",
+        "next": "下一頁",
+        "page": "第",
+        "of": "頁，共"
+      },
+      "watch": {
+        "episodeList": "劇集列表"
+      },
+      "loading": {
+        "loadingDrama": "正在載入劇集",
+        "preparingEpisodes": "請稍候，我們正在為您準備劇集..."
+      }
+    },
+    "zhHans": {
+      "code": "zhHans",
+      "name": "Chinese Simplified",
+      "nativeName": "简体中文",
+      "flag": "🇨🇳",
+      "region": "China",
+      "direction": "ltr",
+      "seo": {
+        "siteTitle": "DramaBox - 短剧流媒体",
+        "siteDescription": "免费观看短剧，无广告。发现来自各种类型的数千个有趣的短剧。",
+        "siteKeywords": "短剧, 剧集流媒体, 免费看剧, DramaBox, 华语剧",
+        "ogTitle": "DramaBox - 免费短剧流媒体",
+        "ogDescription": "免费发现并观看您最喜欢的短剧！",
+        "twitterTitle": "DramaBox - 短剧流媒体",
+        "twitterDescription": "免费观看短剧，无广告。"
+      },
+      "nav": {
+        "home": "首页",
+        "latest": "最新",
+        "popular": "热门",
+        "dubbed": "配音",
+        "search": "搜索剧集...",
+        "language": "语言"
+      },
+      "home": {
+        "forYou": "为你推荐",
+        "forYouDescription": "为您精选的个性化剧集。找到符合您口味的精彩故事！",
+        "trending": "趋势",
+        "continueWatching": "继续观看",
+        "recommended": "推荐"
+      },
+      "page": {
+        "latest": {
+          "title": "最新剧集",
+          "description": "最新发布的剧集。千万别错过！"
+        },
+        "popular": {
+          "title": "现在热门",
+          "description": "大家都在看的最受欢迎剧集！"
+        },
+        "dubbed": {
+          "title": "普通话配音",
+          "description": "配备普通话配音的剧集"
+        }
+      },
+      "buttons": {
+        "watchNow": "立即观看",
+        "readMore": "阅读更多",
+        "loadMore": "加载更多",
+        "share": "分享",
+        "bookmark": "书签",
+        "bookmarked": "已添加书签",
+        "like": "喜欢",
+        "liked": "已喜欢"
+      },
+      "filters": {
+        "all": "全部",
+        "latest": "最新",
+        "popular": "热门",
+        "completed": "已完成",
+        "ongoing": "进行中"
+      },
+      "genres": {
+        "romance": "浪漫",
+        "action": "动作",
+        "comedy": "喜剧",
+        "drama": "剧情",
+        "fantasy": "奇幻",
+        "horror": "恐怖",
+        "thriller": "惊悚",
+        "mystery": "悬疑",
+        "sci_fi": "科幻",
+        "slice_of_life": "生活"
+      },
+      "detail": {
+        "episodes": "集数",
+        "episode": "集",
+        "synopsis": "剧情简介",
+        "status": "状态",
+        "author": "作者",
+        "views": "观看次数",
+        "likes": "喜欢",
+        "chapters": "章节",
+        "related": "相关剧集",
+        "comments": "评论"
+      },
+      "status": {
+        "ongoing": "进行中",
+        "completed": "已完成",
+        "hiatus": "暂停"
+      },
+      "errors": {
+        "notFound": "未找到",
+        "somethingWentWrong": "发生错误",
+        "tryAgain": "再试一次",
+        "goBack": "返回",
+        "goHome": "回到首页",
+        "failedToLoad": "加载剧集失败。请再试一次。",
+        "noDramasFound": "未找到剧集",
+        "noSearchResults": "没有关于 \"{query}\" 的结果",
+        "searchPlaceholder": "输入以搜索剧集"
+      },
+      "footer": {
+        "description": "最好的短剧流媒体平台，拥有来自各种类型的数千个标题。",
+        "navigation": "导航",
+        "quickLinks": "快速链接",
+        "support": "支持",
+        "legal": "法律",
+        "more": "更多",
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款",
+        "contact": "联系",
+        "about": "关于",
+        "faq": "常见问题",
+        "buyApi": "购买 API 源代码",
+        "allRightsReserved": "版权所有"
+      },
+      "pagination": {
+        "previous": "上一页",
+        "next": "下一页",
+        "page": "第",
+        "of": "页，共"
+      },
+      "watch": {
+        "episodeList": "剧集列表"
+      },
+      "loading": {
+        "loadingDrama": "正在加载剧集",
+        "preparingEpisodes": "请稍候，我们正在为您准备剧集..."
+      }
+    }
+  }
+}

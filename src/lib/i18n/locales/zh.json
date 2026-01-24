@@ -1,0 +1,152 @@
+{
+  "code": "zh",
+  "name": "Chinese Traditional",
+  "nativeName": "繁體中文",
+  "flag": "🇹🇼",
+  "region": "Taiwan",
+  "direction": "ltr",
+  "seo": {
+    "siteTitle": "DramaBox - 短劇串流",
+    "siteDescription": "免廣告免費觀看短劇。探索來自各種類型的數千個有趣短劇。",
+    "siteKeywords": "短劇, 劇集串流, 免費看劇, DramaBox, 劇集",
+    "ogTitle": "DramaBox - 免費短劇串流",
+    "ogDescription": "發現並免費觀看您最喜歡的短劇！",
+    "twitterTitle": "DramaBox - 短劇串流",
+    "twitterDescription": "免廣告免費觀看短劇。"
+  },
+  "nav": {
+    "home": "首頁",
+    "latest": "最新",
+    "popular": "熱門",
+    "dubbed": "配音",
+    "search": "搜尋劇集...",
+    "language": "語言"
+  },
+  "home": {
+    "forYou": "為您推薦",
+    "forYouDescription": "專為您挑選的劇集。發現符合您品味的精彩故事！",
+    "trending": "趨勢",
+    "continueWatching": "繼續觀看",
+    "recommended": "推薦",
+    "latestDescription": "剛發布的最新劇集。千萬別錯過！",
+    "trendingDescription": "大家都在看的最熱門劇集！",
+    "dubbedDescription": "配有國語配音的劇集"
+  },
+  "page": {
+    "latest": {
+      "title": "最新劇集",
+      "description": "剛發布的最新劇集。千萬別錯過！"
+    },
+    "popular": {
+      "title": "現在熱門",
+      "description": "現在大家都在觀看的最受歡迎劇集！"
+    },
+    "dubbed": {
+      "title": "國語配音",
+      "description": "帶有國語配音的劇集"
+    }
+  },
+  "buttons": {
+    "watchNow": "立即觀看",
+    "readMore": "閱讀更多",
+    "loadMore": "加載更多",
+    "share": "分享",
+    "bookmark": "書籤",
+    "bookmarked": "已收藏",
+    "like": "喜歡",
+    "liked": "已喜歡"
+  },
+  "filters": {
+    "all": "全部",
+    "latest": "最新",
+    "popular": "熱門",
+    "completed": "已完結",
+    "ongoing": "連載中"
+  },
+  "genres": {
+    "romance": "浪漫",
+    "action": "動作",
+    "comedy": "喜劇",
+    "drama": "劇情",
+    "fantasy": "奇幻",
+    "horror": "恐怖",
+    "thriller": "驚悚",
+    "mystery": "懸疑",
+    "sci_fi": "科幻",
+    "slice_of_life": "生活片段"
+  },
+  "detail": {
+    "episodes": "集數",
+    "episode": "集",
+    "synopsis": "劇情簡介",
+    "status": "狀態",
+    "author": "作者",
+    "views": "觀看次數",
+    "likes": "喜歡",
+    "chapters": "章節",
+    "related": "相關劇集",
+    "comments": "評論"
+  },
+  "status": {
+    "ongoing": "進行中",
+    "completed": "已完成",
+    "hiatus": "暫停"
+  },
+  "errors": {
+    "notFound": "未找到",
+    "somethingWentWrong": "發生錯誤",
+    "tryAgain": "再試一次",
+    "goBack": "返回",
+    "goHome": "回到首頁",
+    "failedToLoad": "加載劇集失敗。請再試一次。",
+    "noDramasFound": "未找到劇集",
+    "noSearchResults": "沒有關於 \"{query}\" 的結果",
+    "searchPlaceholder": "輸入以搜索劇集"
+  },
+  "footer": {
+    "description": "最好的短劇串流平台，擁有來自各種類型的數千個標題。",
+    "navigation": "導航",
+    "quickLinks": "快速連結",
+    "support": "支援",
+    "legal": "法律",
+    "more": "更多",
+    "privacyPolicy": "隱私權政策",
+    "termsOfService": "服務條款",
+    "contact": "聯絡",
+    "about": "關於",
+    "faq": "常見問題",
+    "buyApi": "購買 API 源代碼",
+    "allRightsReserved": "版權所有"
+  },
+  "pagination": {
+    "previous": "上一頁",
+    "next": "下一頁",
+    "page": "第",
+    "of": "頁，共"
+  },
+  "watch": {
+    "episodeList": "劇集列表"
+  },
+  "loading": {
+    "loadingDrama": "載入劇集中",
+    "preparingEpisodes": "請稍候，我們正在為您準備劇集..."
+  },
+  "about": {
+    "title": "關於我們",
+    "content": "DramaBox 是最好的短劇串流平台，提供非凡的觀看體驗。擁有來自各種類型的數千個標題收藏，如浪漫、動作、喜劇、奇幻等，我們確保每個人都能找到適合的內容。\n\n我們的使命是提供高品質的內容，讓任何人、在任何地方、任何時候都能輕鬆訪問。我們與來自世界各地的才華橫溢的創作者合作，為您帶來引人入勝且有趣的內容。\n\nDramaBox 致力於:\n• 品質: 具有引人入勝故事的高製作內容\n• 可訪問性: 在所有設備上易於使用的平台\n• 多樣性: 來自各種類型和文化的收藏\n• 社群: 建立一個支持性的劇集愛好者社群\n\n感謝您選擇 DramaBox 作為您的娛樂平台。"
+  },
+  "privacy": {
+    "title": "隱私權政策",
+    "lastUpdated": "最後更新: 2026年1月",
+    "content": "我們重視您的隱私。此隱私權政策解釋了我們如何收集、使用和保護您的個人資訊。\n\n我們收集的資訊:\n• 您註冊時提供的帳戶資訊\n• 使用資料，如觀看歷史記錄\n• 設備和技術資訊\n• 用於區域內容理解的位置資料\n\n資訊使用:\n• 提供並改進我們的服務\n• 根據您的偏好個性化內容\n• 分析使用趨勢\n• 傳達更新和推廣\n\n資料安全:\n• 我們使用加密來保護您的資料\n• 對個人資訊的有限存取\n• 定期安全系統更新\n\n您的權利:\n• 存取您的個人資訊\n• 請求刪除資料\n• 拒絕某些資料使用\n• 隨時撤回同意\n• 如有更多問題，請透過我們的聯絡頁面與我們聯絡。"
+  },
+  "terms": {
+    "title": "服務條款",
+    "lastUpdated": "最後更新: 2026年1月",
+    "content": "使用 DramaBox 即表示您同意以下服務條款:\n\n1. 服務使用\n• 您必須至少 13 歲才能使用此服務\n• 您對您的帳戶安全負責\n• 服務僅供個人、非商業用途\n\n2. 內容和版權\n• 所有內容均受版權保護\n• 您不得複製、分發或開發內容\n• 個人用途允許合理使用\n\n3. 用戶行為\n• 請勿將服務用於非法活動\n• 請不要干擾他人的體驗\n• 請勿嘗試駭客或破壞系統\n\n4. 終止和暫停\n• 我們可能終止違反條款的帳戶\n• 您可以隨時刪除您的帳戶\n\n5. 條款變更\n• 我們可能會定期更新這些條款\n• 用戶將收到重大變更的通知\n\n6. 責任限制\n• 服務按「原樣」提供\n• 我們不對使用造成的損害負責\n• 繼續使用即表示您同意這些條款。"
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "content": "我們很樂意聽到您的意見！有問題、建議或問題嗎？\n\n聯絡方式:\n• 電子郵件: support@dramabox.net\n• 社交媒體: 關注我們以獲取最新更新\n• 反饋表單: 分享您的體驗\n\n營業時間:\n• 週一 - 週五: 09:00 - 18:00 UTC\n• 週六 - 週日: 10:00 - 16:00 UTC\n\n回應時間:\n• 電子郵件: 我們在 24-48 小時內回應\n• 社交媒體: 一般問題回應更快\n• 對於一般問題，請先查看我們的常見問題。"
+  }
+}

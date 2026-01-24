@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหา - DramaBox</title>
+    <meta name="description" content="ค้นหาซีรีส์ที่คุณต้องการ">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🎬</div>
+                <span class="logo-text">DramaBox</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">หน้าแรก</a>
+                <a href="search.html" class="nav-link active">ค้นหา</a>
+            </div>
+            
+            <select class="lang-select" id="lang-select">
+                <option value="th">🇹🇭 ไทย</option>
+                <option value="en">🇺🇸 English</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- Search Page -->
+    <section class="search-page">
+        <div class="container">
+            <div class="search-header">
+                <h1 class="search-title" data-i18n="search.title">ค้นหาซีรีส์</h1>
+                <input type="text" 
+                       class="search-input-lg" 
+                       id="search-input" 
+                       placeholder="พิมพ์ชื่อซีรีส์..." 
+                       data-i18n="search.placeholder"
+                       autofocus>
+            </div>
+            
+            <p class="search-results-count" id="results-count"></p>
+            
+            <div class="drama-grid" id="search-results">
+                <!-- Results loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">DramaBox</div>
+                <p class="footer-text">© 2026 DramaBox. <span data-i18n="footer.rights">สงวนลิขสิทธิ์</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-nav-icon"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span data-i18n="nav.home">หน้าแรก</span>
+        </a>
+        <a href="search.html" class="mobile-nav-item active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-nav-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>ค้นหา</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            i18n.initLanguageSelector();
+            i18n.applyTranslations();
+            
+            const searchInput = document.getElementById('search-input');
+            const resultsContainer = document.getElementById('search-results');
+            const resultsCount = document.getElementById('results-count');
+            
+            // Check for query parameter
+            const initialQuery = getUrlParam('q');
+            if (initialQuery) {
+                searchInput.value = initialQuery;
+                await performSearch(initialQuery);
+            }
+            
+            // Debounced search
+            const debouncedSearch = debounce(async (query) => {
+                if (query.trim().length < 2) {
+                    resultsContainer.innerHTML = '';
+                    resultsCount.textContent = '';
+                    return;
+                }
+                await performSearch(query);
+            }, 500);
+            
+            // Search on input
+            searchInput.addEventListener('input', (e) => {
+                debouncedSearch(e.target.value);
+            });
+            
+            // Search on enter
+            searchInput.addEventListener('keypress', async (e) => {
+                if (e.key === 'Enter') {
+                    await performSearch(searchInput.value);
+                }
+            });
+        });
+        
+        async function performSearch(query) {
+            const resultsContainer = document.getElementById('search-results');
+            const resultsCount = document.getElementById('results-count');
+            const lang = getCurrentLanguage();
+            
+            if (!query || query.trim().length < 2) {
+                return;
+            }
+            
+            // Update URL
+            const url = new URL(window.location);
+            url.searchParams.set('q', query);
+            window.history.replaceState({}, '', url);
+            
+            // Show loading
+            Components.showLoading('search-results', 6);
+            resultsCount.textContent = '';
+            
+            try {
+                const results = await DramaAPI.searchDramas(query, lang);
+                
+                if (!results || results.length === 0) {
+                    resultsContainer.innerHTML = `
+                        <div class="no-results" style="grid-column: 1/-1;">
+                            <div class="no-results-icon">🔍</div>
+                            <p>${t('search.noResults')}</p>
+                        </div>
+                    `;
+                    resultsCount.textContent = `0 ${t('search.results')}`;
+                    return;
+                }
+                
+                resultsCount.textContent = `${results.length} ${t('search.results')}`;
+                Components.renderDramaGrid('search-results', results);
+                
+            } catch (error) {
+                console.error('Search error:', error);
+                Components.showError('search-results', t('common.error'));
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Background with gradient -->
+  <rect width="200" height="60" rx="12" fill="url(#bg-gradient)"/>
+
+  <!-- Play icon -->
+  <circle cx="30" cy="30" r="18" fill="rgba(255,255,255,0.2)"/>
+  <path d="M26 22L38 30L26 38Z" fill="white"/>
+
+  <!-- Text: DramaBox -->
+  <text x="60" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+    DramaBox
+  </text>
+
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="200" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+</svg>

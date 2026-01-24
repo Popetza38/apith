@@ -1,0 +1,80 @@
+{
+  "name": "DramaBox - Streaming Drama Pendek",
+  "short_name": "DramaBox",
+  "description": "Nonton drama pendek gratis tanpa iklan. Temukan ribuan drama menarik dari berbagai genre.",
+  "start_url": "/in",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "video", "streaming"],
+  "shortcuts": [
+    {
+      "name": "Tonton Terbaru",
+      "short_name": "Terbaru",
+      "description": "Drama terbaru",
+      "url": "/in/terbaru",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Sedang Tren",
+      "short_name": "Trending",
+      "description": "Drama populer",
+      "url": "/in/terpopuler",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Dubbing Indonesia",
+      "short_name": "Dubbed",
+      "description": "Drama dengan dubbing Indonesia",
+      "url": "/in/sulih-suara",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Lanjutkan Nonton",
+      "short_name": "Lanjut",
+      "description": "Lanjutkan nonton drama",
+      "url": "/in/continue-watching",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

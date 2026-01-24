@@ -1,0 +1,51 @@
+# ===========================================
+# Vercel Deployment Ignore File
+# ===========================================
+# Files and directories to exclude from Vercel deployment
+
+# Development files
+.env.local
+.env.development
+.env.test
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts (will be built on Vercel)
+.next/
+out/
+dist/
+build/
+
+# Dependencies (will be installed on Vercel)
+node_modules/
+
+# Misc
+.turbo/
+.vercel/

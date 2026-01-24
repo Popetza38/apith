@@ -1,0 +1,152 @@
+{
+  "code": "pt",
+  "name": "Portuguese",
+  "nativeName": "Português",
+  "flag": "🇧🇷",
+  "region": "Brazil",
+  "direction": "ltr",
+  "seo": {
+    "siteTitle": "DramaBox - Streaming de Dramas Curtos",
+    "siteDescription": "Assista a dramas curtos gratuitamente sem anúncios. Descubra milhares de dramas interessantes de vários gêneros.",
+    "siteKeywords": "drama curto, streaming de drama, assistir drama grátis, DramaBox, dramas",
+    "ogTitle": "DramaBox - Streaming Gratuito de Dramas Curtos",
+    "ogDescription": "Descubra e assista seus dramas curtos favoritos gratuitamente!",
+    "twitterTitle": "DramaBox - Streaming de Dramas Curtos",
+    "twitterDescription": "Assista a dramas curtos gratuitamente sem anúncios."
+  },
+  "nav": {
+    "home": "Início",
+    "latest": "Mais Recentes",
+    "popular": "Populares",
+    "dubbed": "Dublados",
+    "search": "Pesquisar dramas...",
+    "language": "Idioma"
+  },
+  "home": {
+    "forYou": "Para Você",
+    "forYouDescription": "Escolhas de dramas personalizadas apenas para você. Descubra histórias emocionantes que combinam com seu gosto!",
+    "trending": "Em Tendência",
+    "continueWatching": "Continuar Assistindo",
+    "recommended": "Recomendados",
+    "latestDescription": "Os dramas mais recentes que acabaram de ser lançados. Não perca!",
+    "trendingDescription": "Os dramas mais populares que todo mundo está assistindo agora!",
+    "dubbedDescription": "Dramas com dublagem em português"
+  },
+  "page": {
+    "latest": {
+      "title": "Dramas Mais Recentes",
+      "description": "Os dramas mais recentes que acabaram de ser lançados. Não perca!"
+    },
+    "popular": {
+      "title": "Em Alta Agora",
+      "description": "Os dramas mais populares que todo mundo está assistindo agora!"
+    },
+    "dubbed": {
+      "title": "Dublados em Português",
+      "description": "Dramas com dublagem em português"
+    }
+  },
+  "buttons": {
+    "watchNow": "Assistir Agora",
+    "readMore": "Ler Mais",
+    "loadMore": "Carregar Mais",
+    "share": "Compartilhar",
+    "bookmark": "Salvar",
+    "bookmarked": "Salvo",
+    "like": "Curtir",
+    "liked": "Curtido"
+  },
+  "filters": {
+    "all": "Todos",
+    "latest": "Mais Recentes",
+    "popular": "Populares",
+    "completed": "Concluído",
+    "ongoing": "Em Andamento"
+  },
+  "genres": {
+    "romance": "Romance",
+    "action": "Ação",
+    "comedy": "Comédia",
+    "drama": "Drama",
+    "fantasy": "Fantasia",
+    "horror": "Terror",
+    "thriller": "Thriller",
+    "mystery": "Mistério",
+    "sci_fi": "Sci-Fi",
+    "slice_of_life": "Slice of Life"
+  },
+  "detail": {
+    "episodes": "Episódios",
+    "episode": "Episódio",
+    "synopsis": "Sinopse",
+    "status": "Status",
+    "author": "Autor",
+    "views": "Visualizações",
+    "likes": "Curtidas",
+    "chapters": "Capítulos",
+    "related": "Dramas Relacionados",
+    "comments": "Comentários"
+  },
+  "status": {
+    "ongoing": "Em Andamento",
+    "completed": "Concluído",
+    "hiatus": "Hiato"
+  },
+  "errors": {
+    "notFound": "Não Encontrado",
+    "somethingWentWrong": "Algo Deu Errado",
+    "tryAgain": "Tentar Novamente",
+    "goBack": "Voltar",
+    "goHome": "Ir para o Início",
+    "failedToLoad": "Falha ao carregar dramas. Tente novamente.",
+    "noDramasFound": "Nenhum drama encontrado",
+    "noSearchResults": "Nenhum resultado para \"{query}\"",
+    "searchPlaceholder": "Digite para pesquisar dramas"
+  },
+  "footer": {
+    "description": "A melhor plataforma de streaming de dramas curtos com uma coleção de milhares de títulos de vários gêneros.",
+    "navigation": "Navegação",
+    "quickLinks": "Links Rápidos",
+    "support": "Suporte",
+    "legal": "Legal",
+    "more": "Mais",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço",
+    "contact": "Contato",
+    "about": "Sobre",
+    "faq": "Perguntas Frequentes",
+    "buyApi": "Comprar Código Fonte da API",
+    "allRightsReserved": "Todos os Direitos Reservados"
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página",
+    "of": "de"
+  },
+  "watch": {
+    "episodeList": "Lista de Episódios"
+  },
+  "loading": {
+    "loadingDrama": "Carregando Drama",
+    "preparingEpisodes": "Por favor aguarde, estamos preparando os episódios para você..."
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "content": "DramaBox é a melhor plataforma de streaming de dramas curtos, oferecendo uma experiência de visualização extraordinária. Com uma coleção de milhares de títulos de vários gêneros como romance, ação, comédia, fantasia e muito mais, garantimos que há algo para todos.\n\nNossa missão é fornecer conteúdo de alta qualidade facilmente acessível a qualquer pessoa, em qualquer lugar, a qualquer momento. Trabalhamos com criadores talentosos de todo o mundo para trazer histórias envolventes e entretenedoras.\n\nO DramaBox está comprometido com:\n• Qualidade: Conteúdo de alta produção com histórias envolventes\n• Acessibilidade: Plataforma fácil de usar em todos os dispositivos\n• Diversidade: Coleção de vários gêneros e culturas\n• Comunidade: Construindo uma comunidade de amantes de drama solidária\n\nObrigado por escolher DramaBox como sua plataforma de entretenimento."
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última Atualização: Janeiro 2026",
+    "content": "Valorizamos sua privacidade. Esta política de privacidade explica como coletamos, usamos e protegemos suas informações pessoais.\n\nInformações que Coletamos:\n• Informações da conta que você fornece ao se registrar\n• Dados de uso como histórico de visualização\n• Informações do dispositivo e técnicas\n• Dados de localização para compreensão de conteúdo regional\n\nUso das Informações:\n• Fornecer e melhorar nossos serviços\n• Personalizar conteúdo de acordo com suas preferências\n• Analisar tendências de uso\n• Comunicar atualizações e promoções\n\nSegurança de Dados:\n• Usamos criptografia para proteger seus dados\n• Acesso limitado a informações pessoais\n• Atualizações regulares de segurança do sistema\n\nSeus Direitos:\n• Acesso às suas informações pessoais\n• Solicitar exclusão de dados\n• Optar por certos usos de dados\n• Retirar consentimento a qualquer momento\n\nPara mais perguntas, entre em contato conosco através da página Contato."
+  },
+  "terms": {
+    "title": "Termos de Serviço",
+    "lastUpdated": "Última Atualização: Janeiro 2026",
+    "content": "Ao usar o DramaBox, você concorda com os seguintes termos e condições:\n\n1. Uso do Serviço\n• Você deve ter pelo menos 13 anos para usar este serviço\n• Você é responsável pela segurança da sua conta\n• O serviço é apenas para uso pessoal, não comercial\n\n2. Conteúdo e Direitos Autorais\n• Todo o conteúdo é protegido por direitos autorais\n• Você não pode copiar, distribuir ou explorar conteúdo\n• Uso justo é permitido para fins pessoais\n\n3. Conduta do Usuário\n• Não use o serviço para atividades ilegais\n• Não perturbe a experiência de outros\n• Não tente hackear ou danificar o sistema\n\n4. Término e Suspensão\n• Podemos encerrar contas que violem os termos\n• Você pode excluir sua conta a qualquer momento\n\n5. Alterações nos Termos\n• Podemos atualizar estes termos periodicamente\n• Usuários serão notificados de mudanças materiais\n\n6. Limitação de Responsabilidade\n• O serviço é fornecido \"como está\"\n• Não somos responsáveis por danos do uso\n\nAo continuar usando, você concorda com estes termos."
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "content": "Gostaríamos de ouvir você! Tem dúvidas, sugestões ou problemas?\n\nFormas de Contato:\n• Email: support@dramabox.net\n• Redes Sociais: Siga-nos para atualizações\n• Formulário de Feedback: Compartilhe sua experiência\n\nHorário de Funcionamento:\n• Segunda - Sexta: 09:00 - 18:00 UTC\n• Sábado - Domingo: 10:00 - 16:00 UTC\n\nTempo de Resposta:\n• Email: Respondemos em 24-48 horas\n• Redes Sociais: Resposta mais rápida para dúvidas gerais\n\nPara dúvidas gerais, verifique nosso FAQ primeiro."
+  }
+}

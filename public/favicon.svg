@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background with gradient - Rounded Square -->
+  <rect width="512" height="512" rx="110" fill="url(#bg-gradient)"/>
+
+  <!-- Play icon (triangle) centered -->
+  <path d="M200 146L368 256L200 366Z" fill="white"/>
+
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+</svg>
