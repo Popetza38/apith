@@ -5,54 +5,73 @@ const cors = require('cors');
 const axios = require('axios');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 
-// ── PROXY SETUP ──────────────────────────────────────────────────────
-// DramaBox nge-block IP datacenter (VPS/cloud biasa dapet 403 pas token gen).
-// Solusinya: pake residential/mobile proxy. Set PROXY_URL di .env, contoh:
-//   PROXY_URL=http://username:password@proxy-host:port
-// Karena @zhadev/dramabox manggil axios.default.get/post/request langsung
-// (bukan instance axios sendiri), setting axios.defaults di sini otomatis
-// kepakai juga sama request-request di dalam library itu.
-if (process.env.PROXY_URL) {
-  const agent = new HttpsProxyAgent(process.env.PROXY_URL);
+// ── PROXY SETUP & ROTATION POOL ──────────────────────────────────────
+const FREE_BACKUP_PROXIES = [
+  'http://34.43.46.91:443',
+  'http://103.240.7.59:52955',
+  'http://147.45.60.249:1082',
+  'http://147.45.60.246:1082',
+  'http://43.255.159.94:3129',
+  'http://103.15.222.192:10218',
+  'http://45.232.0.129:8080',
+  'http://38.183.146.163:8080',
+  'http://34.43.46.91:80'
+];
+
+let currentProxyIndex = 0;
+
+function getCurrentProxy() {
+  if (process.env.PROXY_URL) return process.env.PROXY_URL;
+  return FREE_BACKUP_PROXIES[currentProxyIndex % FREE_BACKUP_PROXIES.length];
+}
+
+function rotateProxy() {
+  if (!process.env.PROXY_URL) {
+    currentProxyIndex = (currentProxyIndex + 1) % FREE_BACKUP_PROXIES.length;
+    const next = getCurrentProxy();
+    console.log('[proxy-rotator] Switch to next proxy:', next);
+    setAxiosProxy(next);
+  }
+}
+
+function setAxiosProxy(proxyUrl) {
+  if (!proxyUrl) return;
+  const agent = new HttpsProxyAgent(proxyUrl);
   axios.defaults.httpAgent = agent;
   axios.defaults.httpsAgent = agent;
-  axios.defaults.proxy = false; // matiin proxy handling bawaan axios, pake agent manual
-  console.log('[proxy] aktif, semua request lewat:', process.env.PROXY_URL.replace(/\/\/.*@/, '//<hidden>@'));
-} else {
-  console.log('[proxy] PROXY_URL ga di-set, request langsung tanpa proxy (rawan 403 kalau host di cloud/VPS)');
+  axios.defaults.proxy = false;
+  process.env.HTTP_PROXY = proxyUrl;
+  process.env.HTTPS_PROXY = proxyUrl;
 }
 
-// Set environment variables for proxy (some libraries use these)
-if (process.env.PROXY_URL) {
-  process.env.HTTP_PROXY = process.env.PROXY_URL;
-  process.env.HTTPS_PROXY = process.env.PROXY_URL;
-}
+// Initial proxy setup
+const initialProxy = getCurrentProxy();
+setAxiosProxy(initialProxy);
+console.log('[proxy] Active:', initialProxy.replace(/\/\/.*@/, '//<hidden>@'));
 
-// Monkey-patch axios to ensure proxy is used for all requests
+// Monkey-patch axios to handle automatic proxy rotation on request error
 const originalAxios = axios.default;
-const proxyAgent = process.env.PROXY_URL ? new HttpsProxyAgent(process.env.PROXY_URL) : null;
+['get', 'post', 'put', 'delete', 'patch', 'request'].forEach(method => {
+  const originalMethod = originalAxios[method];
+  originalAxios[method] = function(...args) {
+    const activeUrl = getCurrentProxy();
+    const agent = new HttpsProxyAgent(activeUrl);
+    const config = args[args.length - 1];
 
-// Override axios methods to always use proxy agent
-if (proxyAgent) {
-  ['get', 'post', 'put', 'delete', 'patch', 'request'].forEach(method => {
-    const originalMethod = originalAxios[method];
-    originalAxios[method] = function(...args) {
-      const config = args[args.length - 1];
-      if (typeof config === 'object') {
-        config.httpAgent = proxyAgent;
-        config.httpsAgent = proxyAgent;
-        config.proxy = false;
-      } else {
-        args.push({
-          httpAgent: proxyAgent,
-          httpsAgent: proxyAgent,
-          proxy: false
-        });
-      }
-      return originalMethod.apply(this, args);
-    };
-  });
-}
+    if (typeof config === 'object' && config !== null) {
+      config.httpAgent = agent;
+      config.httpsAgent = agent;
+      config.proxy = false;
+    } else {
+      args.push({
+        httpAgent: agent,
+        httpsAgent: agent,
+        proxy: false
+      });
+    }
+    return originalMethod.apply(this, args);
+  };
+});
 
 // Import DramaboxScraper AFTER proxy setup
 const DramaboxScraper = require('@zhadev/dramabox').default;
@@ -141,23 +160,14 @@ app.get('/health', handle(async () => {
 }));
 
 app.get('/proxy-status', (req, res) => {
-  const proxyUrl = process.env.PROXY_URL;
-  let cleanHost = null;
-  if (proxyUrl) {
-    try {
-      const parsed = new URL(proxyUrl);
-      cleanHost = parsed.host;
-    } catch {
-      cleanHost = proxyUrl.replace(/.*@/, '').replace(/\/$/, '');
-    }
-  }
+  const current = getCurrentProxy();
   res.json({
     success: true,
-    proxyActive: !!proxyUrl,
-    proxyHost: cleanHost,
-    note: proxyUrl
-      ? 'Request diarahkan lewat proxy.'
-      : 'Ga pake proxy — kalau host di VPS/cloud, request ke DramaBox bisa kena 403.',
+    activeProxy: current ? current.replace(/\/\/.*@/, '//<hidden>@') : null,
+    isCustomProxy: !!process.env.PROXY_URL,
+    totalBackupProxies: FREE_BACKUP_PROXIES.length,
+    backupPool: FREE_BACKUP_PROXIES.map(p => p.replace(/\/\/.*@/, '//<hidden>@')),
+    note: 'Proxy pool active with auto-rotation support for DramaBox WAF bypass.',
   });
 });
 
