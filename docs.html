@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DramaBox API — Official Interactive Documentation & API Console</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #07090e;
+      --bg-surface: #0e131f;
+      --bg-card: #131b2e;
+      --bg-card-hover: #18223a;
+      --bg-input: #0a0f1a;
+      
+      --border: #1f2d47;
+      --border-subtle: #182338;
+      --border-focus: #38bdf8;
+      
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.2);
+      --accent: #818cf8;
+      --accent-glow: rgba(129, 140, 248, 0.2);
+      
+      --success: #10b981;
+      --success-glow: rgba(16, 185, 129, 0.2);
+      --warning: #f59e0b;
+      --danger: #f43f5e;
+      --danger-glow: rgba(244, 63, 94, 0.2);
+      
+      --badge-get: #0284c7;
+      --badge-get-bg: rgba(2, 132, 199, 0.15);
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Glow Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, rgba(129, 140, 248, 0.03) 50%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -200px;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+    /* Layout */
+    #app {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7, 9, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .base-url-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 4px 10px;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .base-url-box:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    .base-url-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .base-url-input {
+      background: transparent;
+      border: none;
+      color: var(--primary);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 500;
+      outline: none;
+      width: 210px;
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-dim);
+      position: relative;
+    }
+
+    .status-dot.online {
+      background: var(--success);
+      box-shadow: 0 0 10px var(--success);
+    }
+
+    .status-dot.online::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 1.5px solid var(--success);
+      animation: ripple 2s infinite ease-out;
+    }
+
+    @keyframes ripple {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+
+    .status-dot.offline {
+      background: var(--danger);
+      box-shadow: 0 0 10px var(--danger);
+    }
+
+    /* Main Grid Layout */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      flex: 1;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Sidebar Navigation */
+    aside {
+      border-right: 1px solid var(--border-subtle);
+      padding: 24px 16px;
+      position: sticky;
+      top: 61px;
+      height: calc(100vh - 61px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(7, 9, 14, 0.4);
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 12px 10px 36px;
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .nav-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      padding-left: 8px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-main);
+    }
+
+    .nav-link.active {
+      background: var(--bg-card);
+      color: var(--primary);
+      font-weight: 600;
+      border-left: 3px solid var(--primary);
+      padding-left: 7px;
+    }
+
+    .method-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: var(--badge-get-bg);
+      color: var(--badge-get);
+      min-width: 32px;
+      text-align: center;
+    }
+
+    .endpoint-path-sm {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Main Documentation Area */
+    main {
+      padding: 32px 40px 80px;
+      min-width: 0;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(19, 27, 46, 0.8) 0%, rgba(14, 19, 31, 0.9) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.05));
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-mono);
+    }
+
+    .stat-lbl {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Section Component */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-badge {
+      font-size: 11px;
+      background: var(--bg-surface);
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    /* Endpoint Card */
+    .endpoint-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      scroll-margin-top: 80px;
+    }
+
+    .endpoint-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+      padding: 20px 24px;
+      background: rgba(14, 19, 31, 0.6);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .endpoint-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .method-badge {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      background: var(--badge-get-bg);
+      color: var(--badge-get);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+      letter-spacing: 0.05em;
+    }
+
+    .endpoint-full-path {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .param-highlight {
+      color: var(--warning);
+    }
+
+    .card-desc {
+      padding: 16px 24px 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Card Content Layout: Parameters & Code/Console */
+    .card-body {
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .card-body { grid-template-columns: 1fr; }
+      .layout-grid { grid-template-columns: 1fr; }
+      aside { display: none; }
+    }
+
+    .params-section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .params-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .field-label .param-type {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+
+    .field-input {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 9px 12px;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    .field-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    .no-params-notice {
+      color: var(--text-dim);
+      font-size: 13px;
+      font-style: italic;
+      padding: 12px 0;
+    }
+
+    .action-row {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+    }
+
+    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    /* Code & Response Panel */
+    .panel-box {
+      background: #090d16;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-tabs {
+      display: flex;
+      background: rgba(14, 19, 31, 0.8);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 8px;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn:hover { color: var(--text-muted); }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .panel-content {
+      padding: 16px;
+      flex: 1;
+      overflow: auto;
+      max-height: 380px;
+      position: relative;
+    }
+
+    .response-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed var(--border);
+      font-size: 12px;
+    }
+
+    .status-code {
+      font-weight: 700;
+      font-family: var(--font-mono);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .status-code.success { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+    .status-code.error { background: rgba(244, 63, 94, 0.15); color: var(--danger); }
+
+    .time-badge { color: var(--text-dim); font-family: var(--font-mono); }
+
+    pre.code-block {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-main);
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    /* JSON Syntax Highlighting */
+    .j-key { color: #7dd3fc; }
+    .j-str { color: #6ee7b7; }
+    .j-num { color: #fde047; }
+    .j-bool { color: #f472b6; }
+    .j-null { color: #94a3b8; }
+
+    /* Media Player Container */
+    .video-preview-wrap {
+      margin-top: 14px;
+      padding: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    .video-preview-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    video {
+      width: 100%;
+      max-height: 240px;
+      border-radius: var(--radius-sm);
+      background: #000;
+      outline: none;
+    }
+
+    /* Copy Button */
+    .btn-copy {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(31, 45, 71, 0.6);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      padding: 4px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-copy:hover {
+      background: var(--border);
+      color: var(--text-main);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--primary);
+      color: var(--text-main);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      font-weight: 600;
+      font-size: 13px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 24px 40px;
+      color: var(--text-dim);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: rgba(7, 9, 14, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <!-- Header -->
+  <header>
+    <a href="#" class="brand">
+      <div class="brand-icon">D</div>
+      <div>
+        <div class="brand-title">DramaBox API</div>
+      </div>
+      <span class="brand-tag">v1.0.0</span>
+    </a>
+
+    <div class="header-controls">
+      <div class="base-url-box">
+        <span class="base-url-label">Server</span>
+        <input type="text" id="baseUrlInput" class="base-url-input" spellcheck="false" />
+      </div>
+
+      <div class="status-badge" id="proxyBadge" title="Status Proxy Ingest Engine">
+        <span>Proxy:</span>
+        <span id="proxyText" style="color: var(--text-muted); font-weight:600;">Checking...</span>
+      </div>
+
+      <div class="status-badge">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Checking API...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <div class="layout-grid">
+    <!-- Sidebar Navigation -->
+    <aside>
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search endpoints... (Ctrl+K)" />
+      </div>
+
+      <div id="sidebarNav"></div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <h1 class="hero-title">DramaBox Scraper API & Live Console</h1>
+        <p class="hero-subtitle">
+          High-performance REST API documentation and interactive test suite for DramaBox mobile scraper & video streaming backend. Test real-time requests, inspect responses, and generate code snippets instantly.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-val" id="statEndpointCount">19</span>
+            <span class="stat-lbl">Active Endpoints</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="statLatency">-- ms</span>
+            <span class="stat-lbl">Ping Latency</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="statProxyVal" style="color: var(--success);">Active</span>
+            <span class="stat-lbl" id="statProxyLbl">Proxy Status</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" style="color: var(--success);">Operational</span>
+            <span class="stat-lbl">Scraper Engine</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Endpoints Container -->
+      <div id="endpointsContainer"></div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      © 2026 DramaBox Unofficial API Developer Console. Designed for high-speed streaming & scraper research.
+    </div>
+    <div>
+      Powered by Express & Node.js
+    </div>
+  </footer>
+</div>
+
+<!-- Toast Container -->
+<div id="toast" class="toast">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toastMsg">Copied to clipboard!</span>
+</div>
+
+<script>
+// Endpoint Registry Definition
+const ENDPOINTS = [
+  // SYSTEM
+  { group: "System & Health", method: "GET", path: "/api", desc: "Inspect API catalog & operational metadata.", params: [] },
+  { group: "System & Health", method: "GET", path: "/health", desc: "Check live connection to DramaBox upstream servers.", params: [] },
+  { group: "System & Health", method: "GET", path: "/proxy-status", desc: "Inspect active proxy configuration & datacenter IP bypass status.", params: [] },
+
+  // DISCOVERY
+  { group: "Discovery & Feeds", method: "GET", path: "/latest", desc: "Fetch recently updated dramas with pagination support.", params: [{ name: "page", default: "1", type: "query" }] },
+  { group: "Discovery & Feeds", method: "GET", path: "/trending", desc: "Get top trending dramas currently popular on DramaBox.", params: [] },
+  { group: "Discovery & Feeds", method: "GET", path: "/vip", desc: "Retrieve featured VIP dramas.", params: [] },
+  { group: "Discovery & Feeds", method: "GET", path: "/homepage", desc: "Get aggregated home page feed (Latest, Trending & Recommended).", params: [] },
+  { group: "Discovery & Feeds", method: "GET", path: "/recommended", desc: "Get personalized drama recommendations.", params: [] },
+  { group: "Discovery & Feeds", method: "GET", path: "/categories", desc: "Get all available drama genres/categories.", params: [{ name: "page", default: "1", type: "query" }, { name: "pageSize", default: "20", type: "query" }] },
+  { group: "Discovery & Feeds", method: "GET", path: "/category/:typeTwoId", desc: "Filter dramas by category ID.", params: [{ name: "typeTwoId", default: "1", type: "path", required: true }, { name: "page", default: "1", type: "query" }, { name: "pageSize", default: "20", type: "query" }] },
+
+  // SEARCH
+  { group: "Search & Autosuggest", method: "GET", path: "/search", desc: "Search drama titles by keywords.", params: [{ name: "q", default: "love", type: "query", required: true }, { name: "page", default: "1", type: "query" }, { name: "pageSize", default: "20", type: "query" }] },
+  { group: "Search & Autosuggest", method: "GET", path: "/search/suggest", desc: "Get instant keyword autocomplete suggestions.", params: [{ name: "q", default: "love", type: "query", required: true }] },
+
+  // DRAMA & STREAMING
+  { group: "Drama & Video Streams", method: "GET", path: "/detail/:bookId", desc: "Get full details of a drama (bookId) + related suggestions.", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }] },
+  { group: "Drama & Video Streams", method: "GET", path: "/detail-v2/:bookId", desc: "Enhanced drama metadata with extended Webfic data fields.", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }] },
+  { group: "Drama & Video Streams", method: "GET", path: "/chapters/:bookId", desc: "Get complete episode list for a drama.", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }] },
+  { group: "Drama & Video Streams", method: "GET", path: "/episode/:bookId/:episodeIndex", desc: "Get specific episode details & chapter metadata.", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }, { name: "episodeIndex", default: "1", type: "path", required: true }] },
+  { group: "Drama & Video Streams", method: "GET", path: "/stream/:bookId/:episode", desc: "Fetch direct video stream URLs (MP4 / M3U8 playback links).", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }, { name: "episode", default: "1", type: "path", required: true }] },
+  { group: "Drama & Video Streams", method: "GET", path: "/batch/:bookId", desc: "Batch export all episode video links for bulk downloads.", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }] },
+  { group: "Drama & Video Streams", method: "GET", path: "/related/:bookId", desc: "Fetch related dramas similar to the given bookId.", params: [{ name: "bookId", default: "42000001099", type: "path", required: true }] },
+];
+
+// Initialize Base URL
+const baseUrlInput = document.getElementById('baseUrlInput');
+baseUrlInput.value = window.location.origin;
+
+// Render Navigation & Cards
+function initApp() {
+  const groups = {};
+  ENDPOINTS.forEach((ep, idx) => {
+    ep.id = 'ep-' + idx;
+    if (!groups[ep.group]) groups[ep.group] = [];
+    groups[ep.group].push(ep);
+  });
+
+  renderSidebar(groups);
+  renderCards(groups);
+  checkSystemStatus();
+}
+
+// Render Sidebar Navigation
+function renderSidebar(groups) {
+  const container = document.getElementById('sidebarNav');
+  container.innerHTML = '';
+
+  Object.entries(groups).forEach(([groupName, eps]) => {
+    const groupEl = document.createElement('div');
+    groupEl.style.marginBottom = '16px';
+
+    const titleEl = document.createElement('div');
+    titleEl.className = 'nav-group-title';
+    titleEl.textContent = groupName;
+    groupEl.appendChild(titleEl);
+
+    const listEl = document.createElement('ul');
+    listEl.className = 'nav-list';
+
+    eps.forEach(ep => {
+      const itemEl = document.createElement('li');
+      itemEl.innerHTML = `
+        <a class="nav-link" data-id="${ep.id}" href="#${ep.id}">
+          <span class="method-tag">${ep.method}</span>
+          <span class="endpoint-path-sm">${ep.path}</span>
+        </a>
+      `;
+      itemEl.querySelector('a').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById(ep.id).scrollIntoView({ behavior: 'smooth' });
+        setActiveNavLink(ep.id);
+      });
+      listEl.appendChild(itemEl);
+    });
+
+    groupEl.appendChild(listEl);
+    container.appendChild(groupEl);
+  });
+}
+
+function setActiveNavLink(id) {
+  document.querySelectorAll('.nav-link').forEach(el => {
+    el.classList.toggle('active', el.dataset.id === id);
+  });
+}
+
+// Render Main Endpoint Cards
+function renderCards(groups) {
+  const container = document.getElementById('endpointsContainer');
+  container.innerHTML = '';
+
+  Object.entries(groups).forEach(([groupName, eps]) => {
+    const secHeader = document.createElement('div');
+    secHeader.className = 'section-header';
+    secHeader.innerHTML = `
+      <h2>${groupName}</h2>
+      <span class="section-badge">${eps.length} Endpoints</span>
+    `;
+    container.appendChild(secHeader);
+
+    eps.forEach(ep => {
+      const card = document.createElement('div');
+      card.className = 'endpoint-card';
+      card.id = ep.id;
+
+      // Highlight path params (e.g. :bookId)
+      const formattedPath = ep.path.replace(/:([a-zA-Z0-9]+)/g, '<span class="param-highlight">:$1</span>');
+
+      card.innerHTML = `
+        <div class="card-header">
+          <div class="endpoint-title-group">
+            <span class="method-badge">${ep.method}</span>
+            <span class="endpoint-full-path">${formattedPath}</span>
+          </div>
+        </div>
+        <div class="card-desc">${ep.desc}</div>
+
+        <div class="card-body">
+          <!-- Left: Parameters Form -->
+          <div class="params-col">
+            <div class="params-section-title">Request Parameters</div>
+            <form class="params-form" onsubmit="return false;">
+              ${renderParamFields(ep)}
+              <div class="action-row">
+                <button type="button" class="btn-submit" id="btn-run-${ep.id}">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  Send Request
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Code Snippets & Response Console -->
+          <div class="panel-box">
+            <div class="panel-tabs">
+              <button class="tab-btn active" onclick="switchTab('${ep.id}', 'response')">Response</button>
+              <button class="tab-btn" onclick="switchTab('${ep.id}', 'curl')">cURL</button>
+              <button class="tab-btn" onclick="switchTab('${ep.id}', 'js')">JavaScript</button>
+              <button class="tab-btn" onclick="switchTab('${ep.id}', 'python')">Python</button>
+            </div>
+
+            <div class="panel-content" id="panel-content-${ep.id}">
+              <button class="btn-copy" onclick="copyTabContent('${ep.id}')">Copy</button>
+
+              <!-- Response View -->
+              <div class="tab-pane pane-response" id="pane-response-${ep.id}">
+                <div class="response-meta" id="meta-${ep.id}" style="display:none;">
+                  <span class="status-code" id="status-${ep.id}">200 OK</span>
+                  <span class="time-badge" id="time-${ep.id}">0 ms</span>
+                </div>
+                <pre class="code-block" id="output-${ep.id}" style="color: var(--text-dim);">// Press "Send Request" to test endpoint live...</pre>
+
+                <div class="video-preview-wrap" id="video-wrap-${ep.id}" style="display:none;">
+                  <div class="video-preview-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Live Video Stream Preview
+                  </div>
+                  <video id="video-player-${ep.id}" controls crossorigin playsinline></video>
+                </div>
+              </div>
+
+              <!-- cURL View -->
+              <div class="tab-pane pane-curl" id="pane-curl-${ep.id}" style="display:none;">
+                <pre class="code-block" id="code-curl-${ep.id}"></pre>
+              </div>
+
+              <!-- JS View -->
+              <div class="tab-pane pane-js" id="pane-js-${ep.id}" style="display:none;">
+                <pre class="code-block" id="code-js-${ep.id}"></pre>
+              </div>
+
+              <!-- Python View -->
+              <div class="tab-pane pane-python" id="pane-python-${ep.id}" style="display:none;">
+                <pre class="code-block" id="code-python-${ep.id}"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      // Attach event listeners for dynamic url construction & execution
+      setupCardEvents(ep);
+    });
+  });
+}
+
+function renderParamFields(ep) {
+  if (!ep.params || ep.params.length === 0) {
+    return `<div class="no-params-notice">No parameters required for this endpoint.</div>`;
+  }
+
+  return ep.params.map(p => `
+    <div class="field-group">
+      <div class="field-label">
+        <span>${p.name} ${p.required ? '<span style="color:var(--danger)">*</span>' : ''}</span>
+        <span class="param-type">${p.type} param</span>
+      </div>
+      <input 
+        type="text" 
+        class="field-input param-input" 
+        data-name="${p.name}" 
+        data-type="${p.type}" 
+        value="${p.default || ''}" 
+        placeholder="${p.required ? 'Required' : 'Optional'}" 
+      />
+    </div>
+  `).join('');
+}
+
+function setupCardEvents(ep) {
+  const card = document.getElementById(ep.id);
+  const btnRun = card.querySelector(`#btn-run-${ep.id}`);
+  const inputs = card.querySelectorAll('.param-input');
+
+  const updateCodeSnippets = () => {
+    const targetUrl = buildFullUrl(ep, card);
+    
+    // cURL
+    const curl = `curl -X GET "${targetUrl}"`;
+    card.querySelector(`#code-curl-${ep.id}`).textContent = curl;
+
+    // JavaScript
+    const js = `fetch("${targetUrl}")\n  .then(res => res.json())\n  .then(data => console.log(data))\n  .catch(err => console.error(err));`;
+    card.querySelector(`#code-js-${ep.id}`).textContent = js;
+
+    // Python
+    const py = `import requests\n\nurl = "${targetUrl}"\nresponse = requests.get(url)\nprint(response.json())`;
+    card.querySelector(`#code-python-${ep.id}`).textContent = py;
+  };
+
+  inputs.forEach(input => input.addEventListener('input', updateCodeSnippets));
+  updateCodeSnippets();
+
+  btnRun.addEventListener('click', async () => {
+    const targetUrl = buildFullUrl(ep, card);
+    const output = card.querySelector(`#output-${ep.id}`);
+    const meta = card.querySelector(`#meta-${ep.id}`);
+    const statusEl = card.querySelector(`#status-${ep.id}`);
+    const timeEl = card.querySelector(`#time-${ep.id}`);
+    const videoWrap = card.querySelector(`#video-wrap-${ep.id}`);
+    const videoPlayer = card.querySelector(`#video-player-${ep.id}`);
+
+    btnRun.disabled = true;
+    btnRun.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Requesting...`;
+
+    switchTab(ep.id, 'response');
+    output.style.color = 'var(--text-muted)';
+    output.textContent = '// Connecting to server...';
+    meta.style.display = 'none';
+    videoWrap.style.display = 'none';
+
+    const t0 = performance.now();
+    try {
+      const res = await fetch(targetUrl);
+      const latency = Math.round(performance.now() - t0);
+      const contentType = res.headers.get('content-type') || '';
+
+      meta.style.display = 'flex';
+      timeEl.textContent = `${latency} ms`;
+
+      if (res.ok) {
+        statusEl.className = 'status-code success';
+        statusEl.textContent = `${res.status} ${res.statusText}`;
+      } else {
+        statusEl.className = 'status-code error';
+        statusEl.textContent = `${res.status} ${res.statusText}`;
+      }
+
+      if (contentType.includes('application/json')) {
+        const json = await res.json();
+        output.innerHTML = highlightJSON(json);
+
+        // Check if response contains direct playable video stream
+        const streamUrl = findVideoStreamUrl(json);
+        if (streamUrl) {
+          videoWrap.style.display = 'block';
+          videoPlayer.src = streamUrl;
+        }
+      } else {
+        const text = await res.text();
+        output.textContent = text;
+      }
+    } catch (err) {
+      meta.style.display = 'flex';
+      statusEl.className = 'status-code error';
+      statusEl.textContent = 'Network Error';
+      timeEl.textContent = `${Math.round(performance.now() - t0)} ms`;
+      output.textContent = `Failed to fetch: ${err.message}\nMake sure base URL is correct and server is running.`;
+    } finally {
+      btnRun.disabled = false;
+      btnRun.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Send Request`;
+    }
+  });
+}
+
+function buildFullUrl(ep, card) {
+  const base = baseUrlInput.value.trim().replace(/\/$/, '');
+  let path = ep.path;
+  const query = [];
+
+  const inputs = card.querySelectorAll('.param-input');
+  inputs.forEach(input => {
+    const name = input.dataset.name;
+    const type = input.dataset.type;
+    const val = input.value.trim();
+
+    if (type === 'path') {
+      path = path.replace(':' + name, encodeURIComponent(val || ':' + name));
+    } else if (val) {
+      query.push(`${name}=${encodeURIComponent(val)}`);
+    }
+  });
+
+  return base + path + (query.length ? '?' + query.join('&') : '');
+}
+
+function switchTab(epId, tabName) {
+  const card = document.getElementById(epId);
+  const btns = card.querySelectorAll('.tab-btn');
+  const panes = card.querySelectorAll('.tab-pane');
+
+  btns.forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${tabName}'`));
+  });
+
+  panes.forEach(pane => {
+    pane.style.display = pane.classList.contains(`pane-${tabName}`) ? 'block' : 'none';
+  });
+}
+
+function copyTabContent(epId) {
+  const card = document.getElementById(epId);
+  const activePane = card.querySelector('.tab-pane[style*="display: block"] pre');
+  if (activePane) {
+    const text = activePane.textContent;
+    navigator.clipboard.writeText(text);
+    showToast('Copied content to clipboard!');
+  }
+}
+
+function highlightJSON(json) {
+  const str = JSON.stringify(json, null, 2);
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false)\b|null|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g, match => {
+      let cls = 'j-num';
+      if (/^"/.test(match)) {
+        cls = /:$/.test(match) ? 'j-key' : 'j-str';
+      } else if (/true|false/.test(match)) {
+        cls = 'j-bool';
+      } else if (/null/.test(match)) {
+        cls = 'j-null';
+      }
+      return `<span class="${cls}">${match}</span>`;
+    });
+}
+
+function findVideoStreamUrl(obj) {
+  if (!obj || typeof obj !== 'object') return null;
+  if (obj.url && typeof obj.url === 'string' && (obj.url.includes('.mp4') || obj.url.includes('.m3u8'))) return obj.url;
+  if (obj.streamUrl && typeof obj.streamUrl === 'string') return obj.streamUrl;
+  
+  for (const k in obj) {
+    if (typeof obj[k] === 'object') {
+      const found = findVideoStreamUrl(obj[k]);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+// Health Check & Proxy Status
+async function checkSystemStatus() {
+  const dot = document.getElementById('statusDot');
+  const text = document.getElementById('statusText');
+  const proxyText = document.getElementById('proxyText');
+  const latVal = document.getElementById('statLatency');
+  const base = baseUrlInput.value.trim().replace(/\/$/, '');
+
+  const t0 = performance.now();
+  try {
+    const res = await fetch(base + '/health');
+    const ms = Math.round(performance.now() - t0);
+    latVal.textContent = `${ms} ms`;
+
+    if (res.ok) {
+      dot.className = 'status-dot online';
+      text.textContent = 'System Operational';
+    } else {
+      dot.className = 'status-dot offline';
+      text.textContent = `Server Error (${res.status})`;
+    }
+  } catch (err) {
+    dot.className = 'status-dot offline';
+    text.textContent = 'Server Unreachable';
+    latVal.textContent = '-- ms';
+  }
+
+  try {
+    const proxyRes = await fetch(base + '/proxy-status');
+    const proxyData = await proxyRes.json();
+    const statProxyVal = document.getElementById('statProxyVal');
+    const statProxyLbl = document.getElementById('statProxyLbl');
+
+    if (proxyData.proxyActive) {
+      const displayHost = proxyData.proxyHost || 'Active';
+      proxyText.textContent = `Active (${displayHost})`;
+      proxyText.style.color = 'var(--success)';
+      if (statProxyVal) {
+        statProxyVal.textContent = 'Active';
+        statProxyVal.style.color = 'var(--success)';
+      }
+      if (statProxyLbl) {
+        statProxyLbl.textContent = displayHost;
+      }
+    } else {
+      proxyText.textContent = 'Direct Mode (No Proxy)';
+      proxyText.style.color = 'var(--warning)';
+      if (statProxyVal) {
+        statProxyVal.textContent = 'Disabled';
+        statProxyVal.style.color = 'var(--warning)';
+      }
+      if (statProxyLbl) {
+        statProxyLbl.textContent = 'Direct IP';
+      }
+    }
+  } catch {
+    proxyText.textContent = 'Unknown';
+    proxyText.style.color = 'var(--text-dim)';
+  }
+}
+
+// Search Filter & Keybindings
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.endpoint-card');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  cards.forEach(card => {
+    const path = card.querySelector('.endpoint-full-path').textContent.toLowerCase();
+    const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+    const match = path.includes(q) || desc.includes(q);
+    card.style.display = match ? 'block' : 'none';
+  });
+
+  navLinks.forEach(link => {
+    const text = link.textContent.toLowerCase();
+    const match = text.includes(q);
+    link.parentElement.style.display = match ? 'block' : 'none';
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    document.getElementById('searchInput').focus();
+  }
+});
+
+baseUrlInput.addEventListener('change', checkSystemStatus);
+
+// Spin keyframe
+const style = document.createElement('style');
+style.textContent = `@keyframes spin { 100% { transform: rotate(360deg); } }`;
+document.head.appendChild(style);
+
+// Start
+initApp();
+</script>
+</body>
+</html>
