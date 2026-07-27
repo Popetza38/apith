@@ -164,6 +164,7 @@ app.get('/proxy-status', (req, res) => {
 // Helper fallback using Webfic API when sapi.dramaboxdb.com returns 403 or token error
 async function getWebficBrowse(params = {}) {
   try {
+    const lang = params.lang || 'th';
     const res = await axios.post('https://www.webfic.com/webfic/home/browse', {
       typeTwoId: params.typeTwoId || 0,
       pageNo: params.pageNo || 1,
@@ -173,7 +174,8 @@ async function getWebficBrowse(params = {}) {
       headers: {
         'Content-Type': 'application/json',
         'pline': 'DRAMABOX',
-        'language': 'th'
+        'language': lang,
+        'accept-language': 'th-TH,th;q=0.9'
       }
     });
     if (res.data && res.data.data && Array.isArray(res.data.data.bookList)) {
@@ -184,17 +186,56 @@ async function getWebficBrowse(params = {}) {
         introduction: b.introduction,
         chapterCount: b.chapterCount,
         playCount: b.viewCountDisplay || '10K+',
-        tags: b.tags || b.typeTwoNames || []
+        tags: b.tags || b.typeTwoNames || [],
+        language: b.language || 'THAI',
+        simpleLanguage: b.simpleLanguage || 'th'
       }));
     }
   } catch (err) {}
   return [];
 }
 
+async function getWebficDetail(bookId) {
+  try {
+    const res = await axios.post('https://www.webfic.com/webfic/book/detail', {
+      bookId: bookId
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'pline': 'DRAMABOX',
+        'language': 'th',
+        'accept-language': 'th-TH,th;q=0.9'
+      }
+    });
+    if (res.data && res.data.data && res.data.data.book) {
+      const b = res.data.data.book;
+      return {
+        success: true,
+        creator: 'aji-dramabox-api',
+        data: {
+          bookId: b.bookId,
+          bookName: b.bookName || b.replacedBookName,
+          cover: b.cover,
+          introduction: b.introduction,
+          chapterCount: b.chapterCount,
+          ratings: b.ratings,
+          followCount: b.followCount,
+          tags: b.typeTwoNames || b.tags || [],
+          language: b.language || 'THAI',
+          simpleLanguage: b.simpleLanguage || 'th'
+        }
+      };
+    }
+  } catch (err) {}
+  return null;
+}
+
 app.get('/latest', handle(async (req) => {
   const page = parseInt(req.query.page) || 1;
-  const res = await scraper.getLatest(page);
-  if (res && res.success && res.data) return res;
+  try {
+    const res = await scraper.getLatest(page);
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ pageNo: page });
   return {
     success: true,
@@ -204,8 +245,10 @@ app.get('/latest', handle(async (req) => {
 }));
 
 app.get('/trending', handle(async () => {
-  const res = await scraper.getTrending();
-  if (res && res.success && res.data) return res;
+  try {
+    const res = await scraper.getTrending();
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ pageNo: 1 });
   return {
     success: true,
@@ -215,8 +258,10 @@ app.get('/trending', handle(async () => {
 }));
 
 app.get('/vip', handle(async () => {
-  const res = await scraper.getVip();
-  if (res && res.success && res.data) return res;
+  try {
+    const res = await scraper.getVip();
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ pageNo: 1 });
   return {
     success: true,
@@ -226,8 +271,10 @@ app.get('/vip', handle(async () => {
 }));
 
 app.get('/homepage', handle(async () => {
-  const res = await scraper.getHomepage();
-  if (res && res.success && res.data) return res;
+  try {
+    const res = await scraper.getHomepage();
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ pageNo: 1 });
   return {
     success: true,
@@ -242,8 +289,10 @@ app.get('/homepage', handle(async () => {
 }));
 
 app.get('/recommended', handle(async () => {
-  const res = await scraper.getRecommendedBooks();
-  if (res && res.success && res.data) return res;
+  try {
+    const res = await scraper.getRecommendedBooks();
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ pageNo: 1 });
   return {
     success: true,
@@ -261,16 +310,27 @@ app.get('/categories', handle(async (req) => {
 app.get('/category/:typeTwoId', handle(async (req) => {
   const page = parseInt(req.query.page) || 1;
   const pageSize = parseInt(req.query.pageSize) || 20;
-  return await scraper.getBooksByCategory(req.params.typeTwoId, page, pageSize);
+  try {
+    const res = await scraper.getBooksByCategory(req.params.typeTwoId, page, pageSize);
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
+  const webficData = await getWebficBrowse({ typeTwoId: req.params.typeTwoId, pageNo: page, pageSize });
+  return {
+    success: true,
+    creator: 'aji-dramabox-api',
+    data: { isMore: webficData.length >= pageSize, book: webficData }
+  };
 }));
 
 app.get('/search', handle(async (req) => {
   const q = req.query.q || '';
   const page = parseInt(req.query.page) || 1;
   const pageSize = parseInt(req.query.pageSize) || 20;
-  if (!q) throw new Error('Query param "q" wajib diisi');
-  const res = await scraper.searchDrama(q, page, pageSize);
-  if (res && res.success && res.data) return res;
+  if (!q) throw new Error('Query param "q" Wajib diisi');
+  try {
+    const res = await scraper.searchDrama(q, page, pageSize);
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ searchWord: q, pageNo: page, pageSize });
   return {
     success: true,
@@ -281,9 +341,11 @@ app.get('/search', handle(async (req) => {
 
 app.get('/search/suggest', handle(async (req) => {
   const q = req.query.q || '';
-  if (!q) throw new Error('Query param "q" wajib diisi');
-  const res = await scraper.suggestSearch(q);
-  if (res && res.success && res.data) return res;
+  if (!q) throw new Error('Query param "q" Wajib diisi');
+  try {
+    const res = await scraper.suggestSearch(q);
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
   const webficData = await getWebficBrowse({ searchWord: q, pageNo: 1, pageSize: 5 });
   return {
     success: true,
@@ -292,9 +354,25 @@ app.get('/search/suggest', handle(async (req) => {
   };
 }));
 
-app.get('/detail/:bookId', handle(async (req) => await scraper.getDramaDetail(req.params.bookId)));
+app.get('/detail/:bookId', handle(async (req) => {
+  try {
+    const res = await scraper.getDramaDetail(req.params.bookId);
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
+  const fallback = await getWebficDetail(req.params.bookId);
+  if (fallback) return fallback;
+  throw new Error('ไม่พบข้อมูลซีรีส์หรือเกิดข้อผิดพลาดในการดึงข้อมูล');
+}));
 
-app.get('/detail-v2/:bookId', handle(async (req) => await scraper.getDramaDetailV2(req.params.bookId)));
+app.get('/detail-v2/:bookId', handle(async (req) => {
+  try {
+    const res = await scraper.getDramaDetailV2(req.params.bookId);
+    if (res && res.success && res.data) return res;
+  } catch (e) {}
+  const fallback = await getWebficDetail(req.params.bookId);
+  if (fallback) return fallback;
+  throw new Error('ไม่พบข้อมูลซีรีส์หรือเกิดข้อผิดพลาดในการดึงข้อมูล');
+}));
 
 app.get('/chapters/:bookId', handle(async (req) => await scraper.getChapters(req.params.bookId)));
 
